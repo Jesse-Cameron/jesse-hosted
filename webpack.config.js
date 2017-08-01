@@ -3,7 +3,7 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 const extractSass = new ExtractTextPlugin({
     filename: "style.css",
-    disable: process.env.NODE_ENV === "development"
+    //disable: process.env.NODE_ENV === "development"
 });
 
 module.exports = {
@@ -28,5 +28,8 @@ module.exports = {
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'app/build')
-    }
+    },
+    devServer: {
+        contentBase: './app'
+    },
 };
