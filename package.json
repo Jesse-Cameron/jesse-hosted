@@ -1,0 +1,32 @@
+{
+  "name": "jesse-hosted",
+  "version": "1.0.0",
+  "description": "web",
+  "main": "index.js",
+  "scripts": {
+    "start": "serve ./app --single",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jesse-Cameron/jesse-hosted.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jesse-Cameron/jesse-hosted/issues"
+  },
+  "homepage": "https://github.com/Jesse-Cameron/jesse-hosted#readme",
+  "dependencies": {
+    "bulma": "^0.5.0",
+    "serve": "^6.0.1"
+  },
+  "devDependencies": {
+    "css-loader": "^0.28.4",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.4.1"
+  }
+}
