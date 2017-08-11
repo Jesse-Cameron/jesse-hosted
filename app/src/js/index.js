@@ -1,4 +1,5 @@
 'use strict';
-require('../styles/landing.scss');
 
-console.log('hello worlds');
+require('../styles/imports.scss');
+
+console.log('hello world');

@@ -4,7 +4,9 @@
   "description": "web",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server",
+    "start": "serve ./app",
+    "build": "webpack",
+    "watch": "webpack --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,7 +20,7 @@
   },
   "homepage": "https://github.com/Jesse-Cameron/jesse-hosted#readme",
   "dependencies": {
-    "bulma": "^0.5.0"
+    "serve": "^6.0.6"
   },
   "devDependencies": {
     "css-loader": "^0.28.4",

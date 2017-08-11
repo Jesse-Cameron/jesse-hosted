@@ -6,6 +6,8 @@ const extractSass = new ExtractTextPlugin({
     //disable: process.env.NODE_ENV === "development"
 });
 
+//TODO: use: https://github.com/postcss/postcss-loader
+
 module.exports = {
     module: {
         rules: [{
@@ -17,7 +19,7 @@ module.exports = {
                     loader: "sass-loader" // translates CSS into CommonJS
                 }],
                 // use style-loader in development
-                fallback: "style-loader",
+                //fallback: "style-loader",
             })
         }]
     },
