@@ -1,9 +1,9 @@
 $font-stack:    Helvetica, sans-serif;
 $primary-colour: #333;
-$background-colour: #000;
+$background-colour: #121212;
 $font-colour: #FFF;
 
-$column-width: 18vh;
+$column-width: 16vh;
 $corner-size: $column-width / 2;
 
 body {
@@ -17,10 +17,10 @@ body {
     flex-direction: row;
     display: flex;
     height: 80vh;
-    max-width: 1400px;
+    max-width: 1290px;
     margin: 0 auto;
     flex-flow: row-wrap;
-    border: 1px solid red;
+    //border: 1px solid red;
 
     .image-column {
 
@@ -30,7 +30,7 @@ body {
         height: 100%;
         margin-left: 50px;
         margin-right: 50px;
-        border: 1px solid red;
+        //border: 1px solid red;
         box-sizing: border-box;
         -moz-box-sizing: border-box;
         -webkit-box-sizing: border-box;
@@ -41,6 +41,17 @@ body {
             position: relative;
             right: 50%;
             vertical-align: middle;
+
+            // transitions
+            -webkit-filter: grayscale(1); /* Safari 6.0 - 9.0 */
+            filter: grayscale(1);
+            transition: all 0.7s;
+            -webkit-transition: all 0.7s;
+            
+            &:hover {
+                -webkit-filter: none;
+                filter: none;
+            }
         }
 
         /* diamond corners */
