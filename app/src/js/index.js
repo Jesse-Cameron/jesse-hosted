@@ -6,7 +6,6 @@ console.log('hello world');
 
 const elements = document.getElementsByClassName('image-column');
 
-
 for(let i = 0; i < elements.length; i++) {
     const trElement = document.createElement('div');
     trElement.className += "tr";
