@@ -8,9 +8,22 @@ body {
 }
 
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-width: 320px) and (max-width: 480px) {
+@media only screen and (max-width: 767px) {
     /* Styles */
+    body {
+        margin: 0;
+    }
+    .image-content {
+        
+        height: 100vh;
 
+        img {
+            //display: block;
+            height: 100%;
+            margin-left: 50%;
+            transform: translateX(-50%); //TODO: webkit transform
+        }
+    }
 
 }
 
@@ -18,6 +31,7 @@ body {
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
     /* Styles */
+
 }
 
 /* Desktops and laptops ----------- */
@@ -54,7 +68,7 @@ body {
                 height: 100%;
                 position: relative;
                 right: 55%;
-                vertical-align: middle;
+                vertical-align: middle; //TODO: remove
                 
                 // transitions
                 -webkit-filter: grayscale(1); /* Safari 6.0 - 9.0 */
