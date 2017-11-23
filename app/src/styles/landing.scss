@@ -20,6 +20,8 @@ body {
     align-items: center;
     
     background-color: $banner-background;
+
+    pointer-events: none;
     
     h3 {
         text-align: center;
