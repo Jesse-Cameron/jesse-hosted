@@ -1,127 +1,112 @@
 @import "variables";
 
+/* defaults */
 body {
-    font: 100% $font-stack;
-    color: $font-colour;
-    font-size: 14px;
-    background-color: $background-colour;
+    margin: 0;
+    font-family: $font-stack;
+}
+
+.banner {
+    border: 1px solid $border-colour;
+    
+    position: absolute;
+    width: 100vw;
+    height: 3rem;
+    z-index: 1;
+    margin-top: 45vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: $banner-background;
+    
+    h3 {
+        text-align: center;
+        color: white;
+    }
+}
+
+/* big canvas */
+.canvas {
+    border: 1px solid $border-colour;
+    height: 100vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url("/public/img/bg.jpg");
+    
+    
+    .triptych {
+        border: 1px solid $border-colour;
+        
+        display: flex;
+        justify-content: space-around;
+        
+        height: 80vh;
+        width: 80vw;
+        max-width: 1000px;
+        
+        .image-column {
+            border: 1px solid $border-colour;
+            width: 130px;
+            
+            overflow: hidden;
+            position: relative;
+
+            // TODO: refactor our transactions
+            -webkit-filter: grayscale(1); /* Safari 6.0 - 9.0 */ 
+            filter: grayscale(1); 
+            transition: all 0.7s; 
+            -webkit-transition: all 0.7s; 
+
+            &:hover { 
+                -webkit-filter: none; 
+                filter: none; 
+            }
+
+            .image-container {
+                border: 1px solid $border-colour;
+                
+                overflow: hidden;
+                position: absolute;
+                width: 56vh;
+                height: 56vh;
+                transform: translateX(65px) rotate(45deg) ;
+                transform-origin: top left;
+                
+                img {
+                    transform: rotate(-45deg) translateY(-8vh) translateX(50px);
+                    height: 80vh;
+                }
+
+            }
+        }
+    }
 }
 
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 320px) and (max-width: 480px) {
     /* Styles */
-    body {
-        margin: 0;
+    .image-column#col-1, .image-column#col-2, .image-column#col-3, .image-column#col-5 {
+        display: none;
     }
-    .image-content {
-        
-        height: 100vh;
-
-        img {
-            //display: block;
-            height: 100%;
-            margin-left: 50%;
-            transform: translateX(-50%); //TODO: webkit transform
-        }
-    }
-
 }
 
 
 /* iPads (portrait and landscape) ----------- */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
     /* Styles */
-
-}
-
-/* Desktops and laptops ----------- */
-@media only screen and (min-width: 1224px) {
-    $column-width: 16vw;
-    $corner-size: $column-width / 2;
-
-    /* Styles */
-    .image-content {
-        flex-direction: row;
-        display: flex;
-        height: 80vh;
-        max-width: 1300px;
-        margin: 0 auto;
-        flex-flow: row-wrap;
-        border: 1px solid red;
-        //background-image: url('public/img/bg.jpg');
+    
+    .triptych {
         
-        .image-column {
-            
-            object-fit: scale-down;
-            overflow: hidden;
-            max-width: $column-width;
-            height: 100%;
-            margin-left: $column-width / 4;
-            margin-right: $column-width / 4;
-            border: 1px solid red;
-            box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            -webkit-box-sizing: border-box;
-            position: relative;
-            
-            img {
-                height: 100%;
-                position: relative;
-                right: 55%;
-                vertical-align: middle; //TODO: remove
-                
-                // transitions
-                -webkit-filter: grayscale(1); /* Safari 6.0 - 9.0 */
-                filter: grayscale(1);
-                transition: all 0.7s;
-                -webkit-transition: all 0.7s;
-                
-                &:hover {
-                -webkit-filter: none;
-                    filter: none;
-                }
-            }
-            
-            /* diamond corners */
-            .tl, .tr, .bl, .br {
-                width: 0; 
-                height: 0;
-                position: absolute;
-            }
-            
-            .tl {
-                top: 0;
-                left: 0;
-                border-top: $corner-size solid $background-colour; 
-                border-right: $corner-size solid transparent;
-            }
-            
-            .tr {
-                top: 0;
-                right: 0;
-                border-top: $corner-size solid $background-colour; 
-                border-left: $corner-size solid transparent;
-            }
-            
-            .bl {
-                bottom: 0; 
-                left: 0; 
-                border-bottom: $corner-size solid $background-colour; 
-                border-right: $corner-size solid transparent; 
-            }
-            
-            .br {
-                bottom: 0; 
-                right: 0; 
-                border-bottom: $corner-size solid $background-colour; 
-                border-left: $corner-size solid transparent; 
-            }
+        width: 75vw;
+        
+        .image-column#col-1, .image-column#col-2 {
+            display: none;
         }
     }
-}
-
-/* Large screens ----------- */
-@media only screen and (min-width: 1824px) {
-
 }
 
