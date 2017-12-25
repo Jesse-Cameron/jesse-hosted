@@ -1,0 +1,9 @@
+@import "variables";
+/* RESETS */
+body {
+    margin: 0;
+    font-family: $default-font-stack;
+    background-color: $background-light;
+}
+@import "landing";
+@import "index";

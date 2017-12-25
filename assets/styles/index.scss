@@ -1,0 +1,181 @@
+.index-canvas {
+    display: flex;
+    justify-content: center;
+
+    .index-content {
+        border: 1px solid $border-colour;
+
+        width: 90vw;
+        max-width: 1200px;
+
+        display: grid;
+        justify-content: center;
+        grid-template-columns: minmax(200px, 0.11111111fr) minmax(500px, 66.66666vh) minmax(200px, 0.11111111fr);
+        grid-column-gap: 4.2rem;
+
+        .index-sidebar {
+            border: 1px solid $border-colour;
+            height: calc(100vh - 2rem); /* note: this should reflect $gap-spacing, SCSS cars can't be using in calc() */
+            position: sticky; /* this won't work on some browsers */
+            top: 0;
+            padding-top: 1rem;
+        
+            .sidebar-btn {
+                display: none;
+            }
+        
+            .sidebar-header {
+                padding-left: 5px;
+                padding-right: 5px;
+                background-color: black;
+                > p {
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    color: white;
+                    text-align: center;
+                    font-size: 1.2rem;
+                    font-family: $emp-font-stack;
+                }
+            }
+            
+            .sidebar-links {
+                > p {
+                    text-align: right;
+                    font-style: italic;
+                    font-family: $heading-font-stack;
+                } 
+            }
+        }
+
+    .index-mainbar {
+        border: 1px solid $border-colour;
+
+        padding-top: $gap-spacing;
+        position: relative;
+        
+        &:before {
+            content: "";
+            height: 100%;
+            position: absolute;
+            margin-left: -2.1rem;
+            border-left: 1px solid $divider-line-colour;
+        }
+        
+        .photo-series {
+            border-bottom: 1px solid $divider-line-colour;
+            
+            margin-bottom: $gap-spacing;
+            
+            img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+
+            .title {
+                font-size: 2rem;
+                font-style: italic;
+                font-family: $heading-font-stack;
+                    
+                margin-bottom: 0.25rem;
+            }
+            
+            .subtitle {
+                margin-top: 0.5rem;
+                margin-bottom: $gap-spacing;
+                text-align: right;
+            }
+        }
+    }
+  }
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    .index-canvas {
+        .index-content {
+
+            grid-template-columns: repeat(auto-fit, 100%);
+            .index-sidebar {
+                border-right: none;
+                margin-top: -3rem;
+                padding-bottom: -0.5rem;
+                height: auto;
+                position: relative;
+
+                .sidebar-btn {
+                    color: white;
+                    display: block;
+                    position: relative;
+                    text-align: left;
+                    padding-left: 1rem;
+                    z-index: 1;
+                    
+                }
+
+                .sidebar-header {
+                    transform: translateY(1.5rem);
+                    margin-bottom: -1.4rem;
+                    
+                }
+
+                .sidebar-btn:hover {
+
+                    + .sidebar-links { 
+                        display: inline-block;
+                    }
+                    
+                    &:hover {
+                        + .sidebar-links { 
+                            display: inline-block;
+                        }
+                    }
+                }
+
+                .sidebar-links {
+                    display: none;
+                    width: 100%;
+                    
+                    > p {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+  
+    .index-canvas {
+        .index-content {
+            grid-template-columns: minmax(200px, 0.11111111px) minmax(400px, 66.66666vh);
+        }
+    }
+}
+
+
+@media only screen and (min-width: 1300px) {
+    /* Large screens, non-retina */
+    .index-canvas {
+        .index-content {
+            grid-template-columns: minmax(200px, 0.11111111fr) minmax(1000px, 66.66666vh) minmax(200px, 0.11111111fr);
+        }
+    }
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 1300px),
+only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 1300px),
+only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 1300px),
+only screen and (        min-device-pixel-ratio: 2)      and (min-width: 1300px),
+only screen and (                min-resolution: 192dpi) and (min-width: 1300px),
+only screen and (                min-resolution: 2dppx)  and (min-width: 1300px) { 
+
+    /* Large screen, retina, stuff to override above media query */
+    .index-canvas {
+        .index-content {
+            grid-template-columns: minmax(200px, 0.11111111fr) minmax(500px, 66.66666vh) minmax(200px, 0.11111111fr);
+        }
+    }
+}
