@@ -5,7 +5,6 @@ ARG MIX_ENV
 # Set exposed ports
 EXPOSE 5000
 ENV PORT=5000 MIX_ENV=${MIX_ENV}
-RUN printenv
 
 # Cache elixir deps
 ADD mix.exs mix.lock ./
