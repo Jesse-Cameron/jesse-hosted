@@ -2,6 +2,17 @@ sudo: required
 language: generic
 services:
   - docker
+before_install:
+  - export BRANCH=$(echo "${TRAVIS_BRANCH//'/'/-}")
+  - export VERSION=$(cat version.json | grep version | sed "s/.*\"\(.*\)\".*/\1/")
+  - export DOCKER_REPO=jesse-hosted
+  - export CONTAINER_IMAGE=jesse-hosted
 script:
   - docker-compose -f docker-compose.test.yml build
   - docker-compose -f docker-compose.test.yml run jesse-hosted mix test
+deploy:
+  - provider: script
+    skip_cleanup: true
+    script: ./scripts/deploy.sh ${DOCKER_USER} ${DOCKER_PASSWORD} ${CONTAINER_IMAGE} ${DOCKER_REPO} ${BRANCH} ${VERSION}
+    on:
+      branch: develop
