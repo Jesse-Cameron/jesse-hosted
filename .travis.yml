@@ -1,5 +1,7 @@
 sudo: required
 language: generic
+notifications:
+  - email: false
 services:
   - docker
 before_install:
