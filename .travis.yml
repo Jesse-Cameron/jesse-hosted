@@ -7,8 +7,6 @@ services:
 before_install:
   - export BRANCH=$(echo "${TRAVIS_BRANCH//'/'/-}")
   - export VERSION=$(cat mix.exs | grep version | sed "s/.*\"\(.*\)\".*/\1/")
-  - export DOCKER_REPO=jesse-hosted
-  - export CONTAINER_IMAGE=jesse-hosted
 install:
   - chmod +x scripts/deploy.sh
 script:
