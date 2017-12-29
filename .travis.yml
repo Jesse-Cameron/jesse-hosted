@@ -10,6 +10,7 @@ before_install:
 script:
   - docker-compose -f docker-compose.test.yml build
   - docker-compose -f docker-compose.test.yml run jesse-hosted mix test
+  - ls scripts
 deploy:
   - provider: script
     skip_cleanup: true
