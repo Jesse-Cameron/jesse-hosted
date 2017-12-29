@@ -4,7 +4,7 @@ services:
   - docker
 before_install:
   - export BRANCH=$(echo "${TRAVIS_BRANCH//'/'/-}")
-  - export VERSION=$(cat version.json | grep version | sed "s/.*\"\(.*\)\".*/\1/")
+  - export VERSION=$(cat mix.exs | grep version | sed "s/.*\"\(.*\)\".*/\1/")
   - export DOCKER_REPO=jesse-hosted
   - export CONTAINER_IMAGE=jesse-hosted
 script:
