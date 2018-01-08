@@ -36,6 +36,7 @@ defmodule JesseHosted.Mixfile do
       {:phoenix_pubsub, "~> 1.0"},
       {:phoenix_html, "~> 2.10"},
       {:phoenix_live_reload, "~> 1.0", only: :dev},
+      {:poison, "~> 3.1"},
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"}
     ]
