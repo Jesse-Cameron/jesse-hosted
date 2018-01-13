@@ -1,13 +1,9 @@
 <div class="index-mainbar">
-    <div class="photo-series">
-        <div class="title">image series 1</div>
-        <img src="http://bit.ly/2kMRQ29"/>
-        <div class="subtitle">2015--04--01</div>
-    </div>
-
-    <div class="photo-series">
-        <div class="title">series 2</div>
-        <img src="http://bit.ly/2C2udH9"/>
-        <div class="subtitle">12--12--2012</div>
-    </div>
+    <%= for album_key <- @index_map do %>
+        <div class="photo-series">
+            <div class="title"><%= album_key["title"] %></div>
+            <img src="http://bit.ly/2kMRQ29"/>
+            <div class="subtitle"><%= album_key["subtitle"] %></div>
+        </div>
+    <% end %>
 </div>

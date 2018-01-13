@@ -28,7 +28,7 @@ npm-debug.log
 /config/*.secret.exs
 
 # app data
-/assets/album_metadata
+/assets/srv_metadata
 
 
 # personal
