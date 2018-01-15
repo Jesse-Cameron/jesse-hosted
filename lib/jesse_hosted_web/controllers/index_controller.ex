@@ -5,7 +5,7 @@ defmodule JesseHostedWeb.IndexController do
   import JesseHostedWeb.GoogleStorageHelper
 
   def index(conn, _params) do
-    index_map = read_json_to_map("site.json")["albums"] |> to_album_map
+    index_map = read_json_to_map("site.json")["albums"] |> to_album_map()
     render(conn, "index.html", index_map: index_map)
   end
 
