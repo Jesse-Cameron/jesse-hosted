@@ -1,0 +1,27 @@
+{
+  "id": 1,
+  "title": "furred friends",
+  "date_uploaded": "2018-01-05T11:34:35.333Z",
+  "images": [
+    {
+      "file": "poohie.jpg",
+      "title": "pretty paradise",
+      "alt_text": ""
+    },
+    {
+      "file": "lucy.jpg",
+      "title": "lovely lucy",
+      "alt_text": ""
+    },
+    {
+      "file": "teddy.jpg",
+      "title": "temperate teddy",
+      "alt_text": ""
+    },
+    {
+      "file": "polly.jpg",
+      "title": "pleasant polly",
+      "alt_text": ""
+    }
+  ]
+}

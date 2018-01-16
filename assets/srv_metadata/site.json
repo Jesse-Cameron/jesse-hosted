@@ -1,0 +1,32 @@
+{
+  "albums": [
+    {
+      "title": "album1",
+      "album_number": 1,
+      "date": "2018-01-09",
+      "cover_image": "front.jpg",
+      "subtitle": ""
+    },
+    {
+      "title": "album2",
+      "album_number": 2,
+      "date": "2016-01-09",
+      "cover_image": "front.jpg",
+      "subtitle": ""
+    },
+    {
+      "title": "album3",
+      "album_number": 3,
+      "date": "2017-01-09",
+      "cover_image": "front.jpg",
+      "subtitle": ""
+    },
+    {
+      "title": "album4",
+      "album_number": 4,
+      "date": "2016-08-09",
+      "cover_image": "front.jpg",
+      "subtitle": ""
+    }
+  ]
+}
