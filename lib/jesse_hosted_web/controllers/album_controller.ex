@@ -10,7 +10,6 @@ defmodule JesseHostedWeb.AlbumController do
   
   def album(conn, %{"id" => id}) do
     album_data = read_json_to_map(id <> ".json") |> to_image_map()
-    IO.inspect(album_data)
     render conn, "index.html", id: id
   end
 

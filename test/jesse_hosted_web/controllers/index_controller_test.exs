@@ -1,6 +1,6 @@
 defmodule JesseHostedWeb.IndexControllerTest do
   use JesseHostedWeb.ConnCase
-
+  
   import JesseHostedWeb.IndexController
 
   test "GET /", %{conn: conn} do
@@ -24,6 +24,6 @@ defmodule JesseHostedWeb.IndexControllerTest do
       %{"album_number" => 4, "cover_image" => "https://storage.googleapis.com/jesse-hosted-images/albums/4/front.jpg", "date" => "2016-08-09", "subtitle" => "", "title" => "album4"}
     ]
 
-      assert result_map == expected_map
+    assert result_map == expected_map
   end
 end
