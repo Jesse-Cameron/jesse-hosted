@@ -27,7 +27,5 @@ npm-debug.log
 # variables.
 /config/*.secret.exs
 
-
-
 # personal
 .vscode
