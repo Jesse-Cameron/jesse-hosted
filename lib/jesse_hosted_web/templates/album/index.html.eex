@@ -1,18 +1,13 @@
 <div class="index-mainbar">
 
     <div class="series-header">
-        <h3><%= series_title(@conn, @id) %></h3>
+        <h3><%= @album_map["title"] %></h3>
     </div>
 
-    <div class="photo-series">
-        <div class="title">image series 1</div>
-        <img src="http://bit.ly/2kMRQ29"/>
-        <div class="subtitle">2015--04--01</div>
-    </div>
-
-    <div class="photo-series">
-        <div class="title">series 2</div>
-        <img src="http://bit.ly/2C2udH9"/>
-        <div class="subtitle">12--12--2012</div>
-    </div>
+    <%= for album <- @album_map["images"] do %>
+        <div class="photo-series">
+            <%= img_tag(album["file"]) %>
+            <div class="subtitle"><%= album["title"] %></div>
+        </div>
+    <% end %>
 </div>

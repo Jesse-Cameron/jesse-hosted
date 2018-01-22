@@ -20,10 +20,10 @@
             </div>
             <div class="sidebar-btn">☰</div>
             <div class="sidebar-links">
-                <p>home</p>
+                <p><%= link("home", to: "/")%></p>
                 <p>series a</p>
                 <p>series b</p>
-                <p>series c</p>
+                <p><%= link("furry friends", to: "/album/furry_friends")%></p>
                 <p>about</p>
             </div>
         </div>

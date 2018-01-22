@@ -1,31 +1,12 @@
 {
   "albums": [
     {
-      "title": "album1",
+      "title": "furry friends",
       "album_number": 1,
+      "album_id": "a9927b18-436b-44ed-b02a-c814a459f37d",
+      "file_name": "furry_friends.json",
       "date": "2018-01-09",
-      "cover_image": "front.jpg",
-      "subtitle": ""
-    },
-    {
-      "title": "album2",
-      "album_number": 2,
-      "date": "2016-01-09",
-      "cover_image": "front.jpg",
-      "subtitle": ""
-    },
-    {
-      "title": "album3",
-      "album_number": 3,
-      "date": "2017-01-09",
-      "cover_image": "front.jpg",
-      "subtitle": ""
-    },
-    {
-      "title": "album4",
-      "album_number": 4,
-      "date": "2016-08-09",
-      "cover_image": "front.jpg",
+      "cover_image": "poohie.jpg",
       "subtitle": ""
     }
   ]

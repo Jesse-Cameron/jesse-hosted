@@ -8,15 +8,13 @@ defmodule JesseHostedWeb.AlbumController do
     redirect conn, to: "/"
   end
   
-  def album(conn, %{"id" => id}) do
-    album_data = read_json_to_map(id <> ".json") |> to_image_map()
-    render conn, "index.html", id: id
+  def album(conn, %{"name" => file_name}) do
+    album_map = read_json_to_map("albums/" <> file_name <> ".json") |> to_image_map()
+    render conn, "index.html", album_map: album_map
   end
-
+  
   def to_image_map(album_map) do
-    album_id = album_map["id"] |> Integer.to_string()
-    image_list = album_map["images"]
-    new_map = Enum.map(image_list, &update_fn(&1, album_id))
+    new_map = Enum.map(album_map["images"], &update_fn(&1, album_map["id"]))
     Map.put(album_map, "images", new_map)
   end
 

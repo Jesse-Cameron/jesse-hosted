@@ -11,7 +11,7 @@ defmodule JesseHostedWeb.AlbumControllerTest do
   test "to_image_map - converts to the correct format" do
     original_map = %{
       "date_uploaded" => "2018-01-05T11:34:35.333Z", 
-      "id" => 1,
+      "id" => "1",
       "images" => [
         %{"alt_text" => "", "file" => "poohie.jpg", "title" => "pretty paradise"},
         %{"alt_text" => "", "file" => "lucy.jpg", "title" => "lovely lucy"},
@@ -25,7 +25,7 @@ defmodule JesseHostedWeb.AlbumControllerTest do
 
     expected_map = %{
       "date_uploaded" => "2018-01-05T11:34:35.333Z",
-      "id" => 1,
+      "id" => "1",
       "images" => [
         %{"alt_text" => "", "file" => "https://storage.googleapis.com/jesse-hosted-images/albums/1/poohie.jpg", "title" => "pretty paradise"},
         %{"alt_text" => "", "file" => "https://storage.googleapis.com/jesse-hosted-images/albums/1/lucy.jpg", "title" => "lovely lucy"},
