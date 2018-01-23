@@ -6,6 +6,6 @@ services:
       args:
         - MIX_ENV=dev
         - GCP_JSON=${GOOGLE_APPLICATION_CREDENTIALS}
-    image: jesse-hosted-dev
+    image: jesse-hosted
     ports:
       - 5000:5000

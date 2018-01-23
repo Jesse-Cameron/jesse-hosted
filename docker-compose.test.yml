@@ -1,6 +1,6 @@
 version: '3.4'
 services:
-  jesse-hosted:
+  jesse-hosted-test:
     build: 
       context: .
       args:
