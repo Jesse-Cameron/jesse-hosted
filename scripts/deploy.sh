@@ -15,6 +15,7 @@ DOCKER_REPO=${4}
 BRANCH=${5}
 VERSION=${6}
 
+docker-compose -f docker-compose.yml build
 
 TAG=$(echo "${BRANCH//'/'/-}-${VERSION}")
 TAG_LATEST=$(echo "${BRANCH//'/'/-}-latest")

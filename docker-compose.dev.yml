@@ -4,8 +4,8 @@ services:
     build: 
       context: .
       args:
-        - MIX_ENV=test
+        - MIX_ENV=dev
         - GCP_JSON=${GOOGLE_APPLICATION_CREDENTIALS}
-    image: jesse-hosted-test
+    image: jesse-hosted-dev
     ports:
       - 5000:5000
