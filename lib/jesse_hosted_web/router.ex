@@ -14,7 +14,8 @@ defmodule JesseHostedWeb.Router do
 
     get "/", IndexController, :index
     get "/landing", LandingController, :index
-    get "/album", AlbumController, :index
-    get "/album/:id", AlbumController, :index
+    get "/album", AlbumController, :index_redirect
+    get "/album/:name", AlbumController, :album
+    get "/about", IndexController, :index
   end 
 end

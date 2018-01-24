@@ -1,0 +1,13 @@
+{
+  "albums": [
+    {
+      "title": "furry friends",
+      "album_number": 1,
+      "album_id": "a9927b18-436b-44ed-b02a-c814a459f37d",
+      "file_name": "furry_friends.json",
+      "date": "2018-01-09",
+      "cover_image": "poohie.jpg",
+      "subtitle": ""
+    }
+  ]
+}

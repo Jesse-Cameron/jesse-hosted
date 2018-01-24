@@ -1,0 +1,13 @@
+<div class="index-mainbar">
+
+    <div class="series-header">
+        <h3><%= @album_map["title"] %></h3>
+    </div>
+
+    <%= for album <- @album_map["images"] do %>
+        <div class="photo-series">
+            <%= img_tag(album["file"]) %>
+            <div class="subtitle"><%= album["title"] %></div>
+        </div>
+    <% end %>
+</div>
