@@ -13,3 +13,14 @@ To start your Phoenix server:
 * Start Phoenix endpoint with `mix phx.server`
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+
+## Docker development
+
+### `docker-compose`
+
+* `docker-compose -f docker-compose.dev.yml build`
+* `docker-compose -f docker-compose.dev.yml up`
+
+### `docker`
+
+* ` docker run -p 5000:5000 -e MIX_ENV=dev -e GOOGLE_APPLICATION_CREDENTIALS=jesse-hosted-key.json jessec3/jesse-hosted`
