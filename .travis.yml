@@ -1,0 +1,26 @@
+sudo: required
+language: elixir
+notifications:
+  - email: false
+services:
+  - docker
+before_install:
+  - export BRANCH=$(echo "${TRAVIS_BRANCH//'/'/-}")
+  - export VERSION=$(cat mix.exs | grep version | sed "s/.*\"\(.*\)\".*/\1/")
+before_script:
+  - chmod +x ./scripts/*
+  - ./scripts/build.sh
+script:
+  - docker-compose -f docker-compose.test.yml build
+  - docker-compose -f docker-compose.test.yml run jesse-hosted-test mix test
+deploy:
+  - provider: script
+    skip_cleanup: true
+    script: scripts/deploy.sh ${DOCKER_USER} ${DOCKER_PASSWORD} ${CONTAINER_IMAGE} ${DOCKER_REPO} ${BRANCH} ${VERSION}
+    on:
+      branch: develop
+  - provider: script
+    skip_cleanup: true
+    script: scripts/deploy.sh ${DOCKER_USER} ${DOCKER_PASSWORD} ${CONTAINER_IMAGE} ${DOCKER_REPO} ${BRANCH} ${VERSION}
+    on:
+      branch: master

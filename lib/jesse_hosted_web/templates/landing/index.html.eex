@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Welcome...</title>
+    <meta name="author" content="Jesse Cameron">
+    <meta name="description" content="Plz enjoy my lil snaps">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
+</head>
+</body>
+<div class="landing-banner">
+    <div class="content">
+      <h3>under construction. sorry</h3>
+    </div>
+</div>
+    
+<div class="landing-canvas">
+    <div class="landing-triptych">
+        <div class="img-column" id="col-1">
+            <div class="img-container">
+                <img src="<%= image_path(@conn, "1.jpg") %>">
+            </div>
+        </div>
+        <div class="img-column" id="col-2">
+            <div class="img-container">
+                <img src="<%= image_path(@conn, "2.jpg") %>">
+            </div>
+        </div>
+        <div class="img-column" id="col-3">
+            <div class="img-container">
+                <img src="<%= image_path(@conn, "3.jpg") %>">
+            </div>
+        </div>
+        <div class="img-column" id="col-4">
+            <div class="img-container">
+                <img src="<%= image_path(@conn, "4.jpg") %>">
+            </div>
+        </div>
+        <div class="img-column" id="col-5">
+            <div class="img-container">
+                <img src="<%= image_path(@conn, "5.jpg") %>">
+            </div>
+        </div>
+    </div>
+</div>
+<script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+</body>
+</html>

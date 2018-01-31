@@ -1,0 +1,103 @@
+.landing-banner {
+    border: 1px solid $border-colour;
+    
+    position: absolute;
+    width: 100vw;
+    height: 3rem;
+    z-index: 1;
+    margin-top: 45vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: $banner-background;
+    
+    h3 {
+        text-align: center;
+        color: white;
+    }
+}
+
+/* big canvas */
+.landing-canvas {
+    border: 1px solid $border-colour;
+    height: 100vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url("/images/landing/bg.jpg");
+    
+    
+    .landing-triptych {
+        border: 1px solid $border-colour;
+        
+        display: flex;
+        justify-content: space-around;
+        
+        height: 80vh;
+        width: 80vw;
+        max-width: 1000px;
+        
+        .img-column {
+            border: 1px solid $border-colour;
+            width: 130px;
+            
+            overflow: hidden;
+            position: relative;
+
+            // TODO: refactor our transactions
+            -webkit-filter: grayscale(1); /* Safari 6.0 - 9.0 */ 
+            filter: grayscale(1); 
+            transition: all 0.7s; 
+            -webkit-transition: all 0.7s; 
+
+            &:hover { 
+                -webkit-filter: none; 
+                filter: none; 
+            }
+
+            .img-container {
+                border: 1px solid $border-colour;
+                
+                overflow: hidden;
+                position: absolute;
+                width: 56vh;
+                height: 56vh;
+                transform: translateX(65px) rotate(45deg) ;
+                transform-origin: top left;
+                
+                img {
+                    transform: rotate(-45deg) translateY(-8vh) translateX(50px);
+                    height: 80vh;
+                }
+
+            }
+        }
+    }
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    /* Styles */
+    .img-column#col-1, .img-column#col-2, .img-column#col-3, .img-column#col-5 {
+        display: none;
+    }
+}
+
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+    /* Styles */
+    
+    .landing-triptych {
+        
+        width: 75vw;
+        
+        .img-column#col-1, .img-column#col-2 {
+            display: none;
+        }
+    }
+}

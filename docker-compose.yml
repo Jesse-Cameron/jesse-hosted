@@ -1,0 +1,10 @@
+version: '3.4'
+services:
+  jesse-hosted:
+    build: 
+      context: .
+      args:
+        - MIX_ENV=prod
+    image: jesse-hosted
+    ports:
+      - 5000:5000

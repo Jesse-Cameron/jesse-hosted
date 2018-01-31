@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Plz enjoy my lil snaps">
+    <meta name="author" content="Jesse Cameron">
+
+    <title><%= title() %></title>
+    <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
+</head>
+<body>
+<div class="index-canvas">
+    <div class="index-content">
+        
+        <div class="index-sidebar">
+            <div class="sidebar-header">
+                <p>courtesy of jesse</p>
+            </div>
+            <div class="sidebar-btn">☰</div>
+            <div class="sidebar-links">
+                <p><%= link("home", to: "/")%></p>
+                <p>series a</p>
+                <p>series b</p>
+                <p><%= link("furry friends", to: "/album/furry_friends")%></p>
+                <p>about</p>
+            </div>
+        </div>
+
+        <%= render @view_module, @view_template, assigns %>
+    </div>
+</div>
+<script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+</body>
+</html>

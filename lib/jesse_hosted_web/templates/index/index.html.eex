@@ -1,0 +1,9 @@
+<div class="index-mainbar">
+    <%= for album_key <- @index_map do %>
+        <div class="photo-series">
+            <div class="title"><%= album_key["title"] %></div>
+            <img src="http://bit.ly/2kMRQ29"/>
+            <div class="subtitle"><%= album_key["subtitle"] %></div>
+        </div>
+    <% end %>
+</div>
