@@ -4,10 +4,18 @@ notifications:
   - email: false
 services:
   - docker
+cache:
+  directories:
+    - "$HOME/google-cloud-sdk/"
 before_install:
   - export BRANCH=$(echo "${TRAVIS_BRANCH//'/'/-}")
   - export VERSION=$(cat mix.exs | grep version | sed "s/.*\"\(.*\)\".*/\1/")
 before_script:
+  - gcloud version || true
+  - if [ ! -d "$HOME/google-cloud-sdk/bin" ]; then rm -rf $HOME/google-cloud-sdk; export CLOUDSDK_CORE_DISABLE_PROMPTS=1; curl https://sdk.cloud.google.com | bash; fi
+  # Add gcloud to $PATH
+  - source /home/travis/google-cloud-sdk/path.bash.inc
+  - gcloud version
   - chmod +x ./scripts/*
   - ./scripts/build.sh
 script:
