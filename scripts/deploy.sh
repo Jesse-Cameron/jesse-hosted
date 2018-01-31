@@ -32,7 +32,6 @@ docker push "$DOCKER_REPO:$TAG_LATEST"
 
 # [START auth]
 # Decrypt the credentials we added to the repo using the key we added with the Travis command line tool
-openssl aes-256-cbc -K $encrypted_45d1b36fa803_key -iv $encrypted_45d1b36fa803_iv -in credentials.tar.gz.enc -out credentials.tar.gz -d
 # If the SDK is not already cached, download it and unpack it
 if [ ! -d ${HOME}/google-cloud-sdk ]; then
     curl https://sdk.cloud.google.com | bash;
@@ -40,7 +39,7 @@ fi
 tar -xzf credentials.tar.gz
 mkdir -p lib
 # Here we use the decrypted service account credentials to authenticate the command line tool
-gcloud auth activate-service-account --key-file client-secret.json
+gcloud auth activate-service-account --key-file jesse-hosted-key.json
 # [END auth]
 
 # set the right project
