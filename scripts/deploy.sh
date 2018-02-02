@@ -37,7 +37,6 @@ if [ ! -d ${HOME}/google-cloud-sdk ]; then
     curl https://sdk.cloud.google.com | bash;
 fi
 tar -xzf credentials.tar.gz
-mkdir -p lib
 # Here we use the decrypted service account credentials to authenticate the command line tool
 gcloud auth activate-service-account --key-file jesse-hosted-key.json
 # [END auth]
