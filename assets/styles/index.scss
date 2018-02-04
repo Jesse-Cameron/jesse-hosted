@@ -3,7 +3,7 @@
     justify-content: center;
 
     .index-content {
-        border: 1px solid $border-colour;
+        //border: 1px solid $border-colour;
 
         width: 90vw;
         max-width: 1200px;
@@ -14,7 +14,7 @@
         grid-column-gap: 4.2rem;
 
         .index-sidebar {
-            border: 1px solid $border-colour;
+            //border: 1px solid $border-colour;
             height: calc(100vh - 2rem); /* note: this should reflect $gap-spacing, SCSS cars can't be using in calc() */
             position: sticky; /* this won't work on some browsers */
             top: 0;
@@ -43,12 +43,15 @@
                     text-align: right;
                     font-style: italic;
                     font-family: $heading-font-stack;
+                    > a {
+                        color: $index-font-colour
+                    }
                 } 
             }
         }
 
     .index-mainbar {
-        border: 1px solid $border-colour;
+        //border: 1px solid $border-colour;
 
         padding-top: $gap-spacing;
         position: relative;
@@ -60,9 +63,23 @@
             margin-left: -2.1rem;
             border-left: 1px solid $divider-line-colour;
         }
+
+        li {
+            padding-bottom: 0.4rem;
+        }
+
+        .series-header {
+            p {
+                font-family: $heading-font-stack;
+                font-style: italic;
+                text-align: center;
+            }
+
+            margin-bottom: 1rem;
+        }
         
         .photo-series {
-            border-bottom: 1px solid $divider-line-colour;
+            //border-bottom: 1px solid $divider-line-colour;
             
             margin-bottom: $gap-spacing;
             

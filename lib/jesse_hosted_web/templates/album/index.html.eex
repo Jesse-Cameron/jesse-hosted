@@ -2,6 +2,7 @@
 
     <div class="series-header">
         <h3><%= @album_map["title"] %></h3>
+        <p><%= @album_map["subtitle"]%><p>
     </div>
 
     <%= for album <- @album_map["images"] do %>

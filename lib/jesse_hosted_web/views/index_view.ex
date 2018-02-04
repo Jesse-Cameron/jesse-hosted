@@ -1,4 +1,4 @@
-defmodule JesseHostedWeb.IndexView do 
+defmodule JesseHostedWeb.IndexView do
   use JesseHostedWeb, :view
 
   def title do
