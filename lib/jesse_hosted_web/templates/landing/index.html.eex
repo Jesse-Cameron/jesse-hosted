@@ -15,31 +15,31 @@
     </div>
 </div>
     
-<div class="landing-canvas">
+<div class="landing-canvas" style="background-image: url(<%= get_bg_url() %>)">
     <div class="landing-triptych">
         <div class="img-column" id="col-1">
             <div class="img-container">
-                <img src="<%= image_path("1.jpg") %>">
+                <img src="<%= get_image_url(@number_list, 0) %>">
             </div>
         </div>
         <div class="img-column" id="col-2">
             <div class="img-container">
-                <img src="<%= image_path("2.jpg") %>">
+                <img src="<%= get_image_url(@number_list, 1) %>">
             </div>
         </div>
         <div class="img-column" id="col-3">
             <div class="img-container">
-                <img src="<%= image_path("3.jpg") %>">
+                <img src="<%= get_image_url(@number_list, 2) %>">
             </div>
         </div>
         <div class="img-column" id="col-4">
             <div class="img-container">
-                <img src="<%= image_path("4.jpg") %>">
+                <img src="<%= get_image_url(@number_list, 3) %>">
             </div>
         </div>
         <div class="img-column" id="col-5">
             <div class="img-container">
-                <img src="<%= image_path("5.jpg") %>">
+                <img src="<%= get_image_url(@number_list, 4) %>">
             </div>
         </div>
     </div>
