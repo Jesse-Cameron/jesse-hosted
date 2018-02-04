@@ -25,7 +25,7 @@ module.exports = {
   plugins: [
     extractSass,
     new CopyWebpackPlugin([
-      { from: 'static/robots.txt' },
+      { from: 'static/*', to: '../' },
       { from: 'static/images/**/*', to: '../' },
     ]),
   ],
