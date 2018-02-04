@@ -1,27 +1,30 @@
 .landing-banner {
-    border: 1px solid $border-colour;
+    //border: 1px solid $border-colour;
     
     position: absolute;
-    width: 100vw;
+    width: 100%;
     height: 3rem;
     z-index: 1;
     margin-top: 45vh;
-    
+
     display: flex;
     justify-content: center;
     align-items: center;
     
     background-color: $banner-background;
-    
+    pointer-events: none;
+
+
     h3 {
         text-align: center;
         color: white;
+        pointer-events: auto;
     }
 }
 
 /* big canvas */
 .landing-canvas {
-    border: 1px solid $border-colour;
+    //border: 1px solid $border-colour;
     height: 100vh;
     
     display: flex;
@@ -29,7 +32,7 @@
     align-items: center;
 
     .landing-triptych {
-        border: 1px solid $border-colour;
+        //border: 1px solid $border-colour;
         
         display: flex;
         justify-content: space-around;
@@ -39,7 +42,7 @@
         max-width: 1000px;
         
         .img-column {
-            border: 1px solid $border-colour;
+            //border: 1px solid $border-colour;
             width: 130px;
             
             overflow: hidden;
@@ -57,7 +60,7 @@
             }
 
             .img-container {
-                border: 1px solid $border-colour;
+                //border: 1px solid $border-colour;
                 
                 overflow: hidden;
                 position: absolute;
