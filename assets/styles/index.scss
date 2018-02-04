@@ -67,6 +67,16 @@
         li {
             padding-bottom: 0.4rem;
         }
+
+        .series-header {
+            p {
+                font-family: $heading-font-stack;
+                font-style: italic;
+                text-align: center;
+            }
+
+            margin-bottom: 1rem;
+        }
         
         .photo-series {
             //border-bottom: 1px solid $divider-line-colour;
