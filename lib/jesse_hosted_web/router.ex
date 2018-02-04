@@ -13,9 +13,9 @@ defmodule JesseHostedWeb.Router do
     pipe_through(:browser)
 
     get("/", IndexController, :index)
+    get("/about", IndexController, :about)
     get("/landing", LandingController, :index)
     get("/album", AlbumController, :index_redirect)
     get("/album/:name", AlbumController, :album)
-    get("/about", IndexController, :index)
   end
 end

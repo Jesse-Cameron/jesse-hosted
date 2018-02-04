@@ -18,4 +18,8 @@ defmodule JesseHostedWeb.IndexController do
     album_id = map["album_number"] |> Integer.to_string()
     map |> Map.update!("cover_image", &image_url("albums/#{album_id}", &1))
   end
+
+  def about(conn, _params) do
+    render(conn, "about.html")
+  end
 end

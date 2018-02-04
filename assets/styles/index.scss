@@ -43,6 +43,9 @@
                     text-align: right;
                     font-style: italic;
                     font-family: $heading-font-stack;
+                    > a {
+                        color: $index-font-colour
+                    }
                 } 
             }
         }
@@ -59,6 +62,10 @@
             position: absolute;
             margin-left: -2.1rem;
             border-left: 1px solid $divider-line-colour;
+        }
+
+        li {
+            padding-bottom: 0.4rem;
         }
         
         .photo-series {

@@ -24,7 +24,7 @@
                 <p><%= link("raw flower", to: "/album/raw_flower")%></p>
                 <p><%= link("non-compliant nature", to: "/album/bush")%></p>
                 <p><%= link("furry friends", to: "/album/furry_friends")%></p>
-                <p>about</p>
+                <p><%= link("about", to: "/about")%></p>
             </div>
         </div>
 
