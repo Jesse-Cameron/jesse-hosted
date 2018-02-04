@@ -1,10 +1,10 @@
 defmodule JesseHostedWeb.LandingView do
-    use JesseHostedWeb, :view
+  use JesseHostedWeb, :view
 
-    alias Plug.Conn
+  alias JesseHostedWeb.GoogleStorageHelper
 
-    #TODO: make this randomly generate an image?
-    def image_path(%Conn{private: private} = conn, path) do
-        private.phoenix_endpoint.static_path("/images/landing/" <> path)
-    end
+  # TODO: make this randomly generate an image?
+  def image_path(path) do
+    GoogleStorageHelper.image_url("landing", path)
+  end
 end

@@ -19,27 +19,27 @@
     <div class="landing-triptych">
         <div class="img-column" id="col-1">
             <div class="img-container">
-                <img src="<%= image_path(@conn, "1.jpg") %>">
+                <img src="<%= image_path("1.jpg") %>">
             </div>
         </div>
         <div class="img-column" id="col-2">
             <div class="img-container">
-                <img src="<%= image_path(@conn, "2.jpg") %>">
+                <img src="<%= image_path("2.jpg") %>">
             </div>
         </div>
         <div class="img-column" id="col-3">
             <div class="img-container">
-                <img src="<%= image_path(@conn, "3.jpg") %>">
+                <img src="<%= image_path("3.jpg") %>">
             </div>
         </div>
         <div class="img-column" id="col-4">
             <div class="img-container">
-                <img src="<%= image_path(@conn, "4.jpg") %>">
+                <img src="<%= image_path("4.jpg") %>">
             </div>
         </div>
         <div class="img-column" id="col-5">
             <div class="img-container">
-                <img src="<%= image_path(@conn, "5.jpg") %>">
+                <img src="<%= image_path("5.jpg") %>">
             </div>
         </div>
     </div>

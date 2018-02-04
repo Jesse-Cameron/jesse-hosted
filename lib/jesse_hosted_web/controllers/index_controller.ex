@@ -11,11 +11,11 @@ defmodule JesseHostedWeb.IndexController do
 
   def to_album_map(index_map) do
     index_map
-    |> Enum.map(&update_fn &1)
+    |> Enum.map(&update_fn(&1))
   end
 
   defp update_fn(map) do
     album_id = map["album_number"] |> Integer.to_string()
-    map |> Map.update!("cover_image", &image_url(album_id, &1))
+    map |> Map.update!("cover_image", &image_url("albums/#{album_id}", &1))
   end
 end
