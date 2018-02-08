@@ -118,42 +118,36 @@
                 padding-bottom: -0.5rem;
                 height: auto;
                 position: relative;
+                z-index: 1;
+                pointer-events: all;
 
                 .sidebar-btn {
                     color: white;
-                    display: block;
+                    display: inline-block;
                     position: relative;
                     text-align: left;
                     padding-left: 1rem;
-                    z-index: 1;
-                    
                 }
 
                 .sidebar-header {
                     transform: translateY(1.5rem);
                     margin-bottom: -1.4rem;
-                    
-                }
-
-                .sidebar-btn:hover {
-
-                    + .sidebar-links { 
-                        display: inline-block;
-                    }
-                    
-                    &:hover {
-                        + .sidebar-links { 
-                            display: inline-block;
-                        }
-                    }
                 }
 
                 .sidebar-links {
-                    display: none;
-                    width: 100%;
-                    
+                    visibility: hidden;
+                    height: 0;
+
                     > p {
                         text-align: center;
+                    }
+                }
+            
+                &:hover {
+
+                    > .sidebar-links {
+                        height: auto;
+                        visibility: visible;
                     }
                 }
             }
