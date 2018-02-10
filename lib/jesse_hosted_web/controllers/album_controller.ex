@@ -14,7 +14,7 @@ defmodule JesseHostedWeb.AlbumController do
   end
 
   def to_image_map(album_map) do
-    new_map = Enum.map(album_map["images"], &update_fn(&1, album_map["id"]))
+    new_map = Enum.map(album_map["images"], &update_fn(&1, album_map["folder_name"]))
     Map.put(album_map, "images", new_map)
   end
 

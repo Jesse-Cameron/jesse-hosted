@@ -1,6 +1,7 @@
 {
   "id": "a9927b18-436b-44ed-b02a-c814a459f37d",
   "title": "furry friends",
+  "folder_name" : "furry-friends",
   "subtitle": "\"animals are some of my favourite subjects. they simultaniously know you're taking a photo and don't give a damn\"",
   "date_uploaded": "2018-01-05T11:34:35.333Z",
   "images": [
@@ -10,18 +11,23 @@
       "alt_text": ""
     },
     {
-      "file": "lucy.jpg",
-      "title": "lovely lucy",
-      "alt_text": ""
-    },
-    {
       "file": "teddy.jpg",
       "title": "temperate teddy",
       "alt_text": ""
     },
     {
+      "file": "lucy.jpg",
+      "title": "lovely lucy",
+      "alt_text": ""
+    },
+    {
       "file": "polly.jpg",
       "title": "pleasant polly",
+      "alt_text": ""
+    },
+    {
+      "file": "moushka.jpg",
+      "title": "miss moushka",
       "alt_text": ""
     }
   ]
