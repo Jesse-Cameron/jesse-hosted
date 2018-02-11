@@ -10,6 +10,7 @@ defmodule JesseHostedWeb.AlbumControllerTest do
 
   test "to_image_map - converts to the correct format" do
     original_map = %{
+      "folder_name" => "furred-friends",
       "date_uploaded" => "2018-01-05T11:34:35.333Z",
       "id" => "1",
       "images" => [
@@ -29,26 +30,27 @@ defmodule JesseHostedWeb.AlbumControllerTest do
       "images" => [
         %{
           "alt_text" => "",
-          "file" => "https://storage.googleapis.com/jesse-hosted-images/albums/1/poohie.jpg",
+          "file" => "https://storage.googleapis.com/jesse-hosted-images/albums/furred-friends/poohie.jpg",
           "title" => "pretty paradise"
         },
         %{
           "alt_text" => "",
-          "file" => "https://storage.googleapis.com/jesse-hosted-images/albums/1/lucy.jpg",
+          "file" => "https://storage.googleapis.com/jesse-hosted-images/albums/furred-friends/lucy.jpg",
           "title" => "lovely lucy"
         },
         %{
           "alt_text" => "",
-          "file" => "https://storage.googleapis.com/jesse-hosted-images/albums/1/teddy.jpg",
+          "file" => "https://storage.googleapis.com/jesse-hosted-images/albums/furred-friends/teddy.jpg",
           "title" => "temperate teddy"
         },
         %{
           "alt_text" => "",
-          "file" => "https://storage.googleapis.com/jesse-hosted-images/albums/1/polly.jpg",
+          "file" => "https://storage.googleapis.com/jesse-hosted-images/albums/furred-friends/polly.jpg",
           "title" => "pleasant polly"
         }
       ],
-      "title" => "furred friends"
+      "title" => "furred friends",
+      "folder_name" => "furred-friends"
     }
 
     assert result_map == expected_map
