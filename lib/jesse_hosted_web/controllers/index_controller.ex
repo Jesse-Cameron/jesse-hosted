@@ -15,7 +15,7 @@ defmodule JesseHostedWeb.IndexController do
   end
 
   defp update_fn(map) do
-    album_id = map["album_number"] |> Integer.to_string()
+    album_id = map["title"] |> String.replace(" ", "-")
     map |> Map.update!("cover_image", &image_url("albums/#{album_id}", &1))
   end
 

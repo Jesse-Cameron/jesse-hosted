@@ -1,8 +1,10 @@
 <div class="index-mainbar">
     <%= for album_key <- @index_map do %>
         <div class="photo-series">
-            <div class="title"><%= album_key["title"] %></div>
-            <img src="http://bit.ly/2kMRQ29"/>
+            <%= link to: "/album/#{get_album_route(album_key["title"])}" do %>
+                <div class="title"><h3><%= album_key["title"] %></h3></div>
+                <img src="<%= album_key["cover_image"]%>"/>
+            <% end %>
             <div class="subtitle"><%= album_key["subtitle"] %></div>
         </div>
     <% end %>
