@@ -8,6 +8,24 @@
       "date": "2018-01-09",
       "cover_image": "poohie.jpg",
       "subtitle": ""
+    },
+    {
+      "title": "derelict",
+      "album_number": 2,
+      "album_id": "2399b40a-864c-4227-9be1-5a5b77026072",
+      "file_name": "derelict.json",
+      "date": "2018-01-09",
+      "cover_image": "1.jpg",
+      "subtitle": ""
+    },
+    {
+      "title": "bloody bushland",
+      "album_number": 3,
+      "album_id": "591ad329-dd4e-4940-9119-288118cb6547",
+      "file_name": "bloody_bushland.json",
+      "date": "2018-01-09",
+      "cover_image": "1.jpg",
+      "subtitle": ""
     }
   ]
 }
