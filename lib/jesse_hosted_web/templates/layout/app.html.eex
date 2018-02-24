@@ -30,9 +30,9 @@
             <div class="sidebar-btn">☰</div>
             <div class="sidebar-links">
                 <p><%= link("home", to: "/")%></p>
-                <p><%= link("raw flower", to: "/album/raw_flower")%></p>
-                <p><%= link("non-compliant nature", to: "/album/bush")%></p>
-                <p><%= link("furry friends", to: "/album/furry_friends")%></p>
+                <p><%= link("derelict", to: "/album/derelict")%></p>
+                <p><%= link("a wicked bushland", to: "/album/bushland")%></p>
+                <p><%= link("furred friends", to: "/album/furred_friends")%></p>
                 <p><%= link("about", to: "/about")%></p>
             </div>
         </div>

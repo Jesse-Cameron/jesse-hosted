@@ -15,28 +15,32 @@ defmodule JesseHostedWeb.IndexControllerTest do
         "cover_image" => "front.jpg",
         "date" => "2018-01-09",
         "subtitle" => "",
-        "title" => "album 1"
+        "title" => "album 1",
+        "folder_name" => "album-1"
       },
       %{
         "album_number" => 2,
         "cover_image" => "front.jpg",
         "date" => "2016-01-09",
         "subtitle" => "",
-        "title" => "album 2"
+        "title" => "album 2",
+        "folder_name" => "album-2"
       },
       %{
         "album_number" => 3,
         "cover_image" => "front.jpg",
         "date" => "2017-01-09",
         "subtitle" => "",
-        "title" => "album 3"
+        "title" => "album 3",
+        "folder_name" => "album-3"
       },
       %{
         "album_number" => 4,
         "cover_image" => "front.jpg",
         "date" => "2016-08-09",
         "subtitle" => "",
-        "title" => "album 4"
+        "title" => "album 4",
+        "folder_name" => "album-4"
       }
     ]
 
@@ -48,28 +52,32 @@ defmodule JesseHostedWeb.IndexControllerTest do
         "cover_image" => "https://storage.googleapis.com/jesse-hosted-images/albums/album-1/front.jpg",
         "date" => "2018-01-09",
         "subtitle" => "",
-        "title" => "album 1"
+        "title" => "album 1",
+        "folder_name" => "album-1"
       },
       %{
         "album_number" => 2,
         "cover_image" => "https://storage.googleapis.com/jesse-hosted-images/albums/album-2/front.jpg",
         "date" => "2016-01-09",
         "subtitle" => "",
-        "title" => "album 2"
+        "title" => "album 2",
+        "folder_name" => "album-2"
       },
       %{
         "album_number" => 3,
         "cover_image" => "https://storage.googleapis.com/jesse-hosted-images/albums/album-3/front.jpg",
         "date" => "2017-01-09",
         "subtitle" => "",
-        "title" => "album 3"
+        "title" => "album 3",
+        "folder_name" => "album-3"
       },
       %{
         "album_number" => 4,
         "cover_image" => "https://storage.googleapis.com/jesse-hosted-images/albums/album-4/front.jpg",
         "date" => "2016-08-09",
         "subtitle" => "",
-        "title" => "album 4"
+        "title" => "album 4",
+        "folder_name" => "album-4"
       }
     ]
 
