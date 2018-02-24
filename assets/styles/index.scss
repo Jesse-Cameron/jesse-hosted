@@ -58,6 +58,10 @@ p {
             padding-top: $gap-spacing;
             position: relative;
             
+            a {
+                color: $index-font-colour;
+            }
+
             &:before {
                 content: "";
                 height: 100%;
@@ -90,7 +94,7 @@ p {
 
                 a {
                     text-decoration: none;
-                    color: black;
+                    color: $index-font-colour;
                 }
                 border-bottom: 1px solid $divider-line-colour;
                 margin-bottom: $gap-spacing;
@@ -140,6 +144,7 @@ p {
                     position: relative;
                     text-align: left;
                     padding-left: 1rem;
+                    margin-top: -0.15rem;
                 }
 
                 .sidebar-header {
@@ -171,7 +176,7 @@ p {
             }
 
             .index-mainbar {
-                padding-top: 1rem;
+                padding-top: 1.2rem;
             }
         }
     }
