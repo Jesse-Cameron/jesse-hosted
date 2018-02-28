@@ -3,7 +3,7 @@
     
     position: absolute;
     width: 100%;
-    height: 3rem;
+    height: 4rem;
     z-index: 1;
     margin-top: 45vh;
 
@@ -15,9 +15,17 @@
     pointer-events: none;
 
     h3 {
+
+        margin: 0;
         text-align: center;
         color: white;
         pointer-events: auto;
+        font-style: oblique;
+        font-family: $heading-font-stack;
+
+        a {
+            color: white;
+        }
     }
 }
 
@@ -29,6 +37,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-size: cover;
 
     .landing-triptych {
         //border: 1px solid $border-colour;
