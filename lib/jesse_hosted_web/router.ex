@@ -12,9 +12,9 @@ defmodule JesseHostedWeb.Router do
   scope "/", JesseHostedWeb do
     pipe_through(:browser)
 
-    get("/", IndexController, :index)
+    get("/", LandingController, :index)
+    get("/home", IndexController, :index)
     get("/about", IndexController, :about)
-    get("/landing", LandingController, :index)
     get("/album", AlbumController, :index_redirect)
     get("/album/:name", AlbumController, :album)
   end

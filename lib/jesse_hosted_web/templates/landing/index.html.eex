@@ -20,7 +20,8 @@
 </body>
 <div class="landing-banner">
     <div class="content">
-      <h3>under construction. sorry</h3>
+      <h3>photography by jesse cameron</h3>
+      <h3><%= link("come on in ...", to: "/home") %></h3>
     </div>
 </div>
     
@@ -31,7 +32,7 @@
                 <img src="<%= get_image_url(@number_list, 0) %>">
             </div>
         </div>
-        <div class="img-column" id="col-2">
+        <div class="img-column" id="col-2"> 
             <div class="img-container">
                 <img src="<%= get_image_url(@number_list, 1) %>">
             </div>

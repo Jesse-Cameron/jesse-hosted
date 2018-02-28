@@ -1,10 +1,19 @@
 {
   "albums": [
     {
-      "title": "furry friends",
+      "title": "a wicked bushland",
+      "album_number": 3,
+      "album_id": "591ad329-dd4e-4940-9119-288118cb6547",
+      "folder_name": "bushland",
+      "date": "2018-01-09",
+      "cover_image": "1.jpg",
+      "subtitle": ""
+    },
+    {
+      "title": "furred friends",
       "album_number": 1,
       "album_id": "a9927b18-436b-44ed-b02a-c814a459f37d",
-      "folder_name": "furry-friends",
+      "folder_name": "furred-friends",
       "date": "2018-01-09",
       "cover_image": "poohie.jpg",
       "subtitle": ""
@@ -14,15 +23,6 @@
       "album_number": 2,
       "album_id": "2399b40a-864c-4227-9be1-5a5b77026072",
       "folder_name": "derelict",
-      "date": "2018-01-09",
-      "cover_image": "1.jpg",
-      "subtitle": ""
-    },
-    {
-      "title": "a wicked bushland",
-      "album_number": 3,
-      "album_id": "591ad329-dd4e-4940-9119-288118cb6547",
-      "folder_name": "bushland",
       "date": "2018-01-09",
       "cover_image": "1.jpg",
       "subtitle": ""
