@@ -20,6 +20,7 @@ before_script:
 - gcloud version
 - chmod +x ./scripts/*
 - ./scripts/build.sh
+- export GOOGLE_APPLICATION_CREDENTIALS=jesse-hosted-key.json
 - printenv
 script:
 - docker-compose -f docker-compose.test.yml build
