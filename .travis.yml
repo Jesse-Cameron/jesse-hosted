@@ -19,8 +19,8 @@ before_script:
 - source /home/travis/google-cloud-sdk/path.bash.inc
 - gcloud version
 - chmod +x ./scripts/*
-- "./scripts/build.sh"
-- ls
+- ./scripts/build.sh
+- printenv
 script:
 - docker-compose -f docker-compose.test.yml build
 - docker-compose -f docker-compose.test.yml run jesse-hosted-test mix test
