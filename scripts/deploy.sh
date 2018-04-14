@@ -2,6 +2,7 @@
 
 echo "pushing container"
 
+set -x
 
 SOURCE_CONTAINER=${1}
 DOCKER_REPO=${2}
@@ -25,6 +26,6 @@ gcloud auth activate-service-account --key-file jesse-hosted-key.json
 # [END auth]
 
 # set the right project
-gcloud auth configure-docker
+gcloud auth configure-docker -y
 docker tag "$SOURCE_CONTAINER" us.gcr.io/jesse-hosted/"$DOCKER_REPO:$TAG_LATEST"
 docker push us.gcr.io/jesse-hosted/"$DOCKER_REPO:$TAG_LATEST"
