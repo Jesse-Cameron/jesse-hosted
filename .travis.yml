@@ -20,6 +20,7 @@ before_script:
 - gcloud version
 - chmod +x ./scripts/*
 - "./scripts/build.sh"
+- ls
 script:
 - docker-compose -f docker-compose.test.yml build
 - docker-compose -f docker-compose.test.yml run jesse-hosted-test mix test
