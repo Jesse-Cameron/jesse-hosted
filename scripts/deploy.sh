@@ -2,6 +2,15 @@
 
 echo "pushing container"
 
+
+SOURCE_CONTAINER=${1}
+DOCKER_REPO=${2}
+BRANCH=${3}
+VERSION=${4}
+
+TAG=$(echo "${BRANCH//'/'/-}-${VERSION}")
+TAG_LATEST=$(echo "${BRANCH//'/'/-}-latest")
+
 # push to gcr
 
 # [START auth]
@@ -16,6 +25,6 @@ gcloud auth activate-service-account --key-file jesse-hosted-key.json
 # [END auth]
 
 # set the right project
-gcloud config set project jesse-hosted
+gcloud auth configure-docker
 docker tag "$SOURCE_CONTAINER" us.gcr.io/jesse-hosted/"$DOCKER_REPO:$TAG_LATEST"
-gcloud docker -- push us.gcr.io/jesse-hosted/"$DOCKER_REPO:$TAG_LATEST"
+docker push us.gcr.io/jesse-hosted/"$DOCKER_REPO:$TAG_LATEST"

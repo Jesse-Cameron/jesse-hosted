@@ -29,13 +29,11 @@ script:
 deploy:
 - provider: script
   skip_cleanup: true
-  script: scripts/deploy.sh ${DOCKER_USER} ${DOCKER_PASSWORD} ${CONTAINER_IMAGE} ${DOCKER_REPO}
-    ${BRANCH} ${VERSION}
+  script: scripts/deploy.sh ${CONTAINER_IMAGE} ${DOCKER_REPO} ${BRANCH} ${VERSION}
   on:
     branch: develop
 - provider: script
   skip_cleanup: true
-  script: scripts/deploy.sh ${DOCKER_USER} ${DOCKER_PASSWORD} ${CONTAINER_IMAGE} ${DOCKER_REPO}
-    ${BRANCH} ${VERSION}
+  script: scripts/deploy.sh ${CONTAINER_IMAGE} ${DOCKER_REPO} ${BRANCH} ${VERSION}
   on:
     branch: master
