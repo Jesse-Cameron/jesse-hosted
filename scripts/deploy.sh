@@ -26,6 +26,6 @@ gcloud auth activate-service-account --key-file jesse-hosted-key.json
 # [END auth]
 
 # set the right project
-gcloud auth configure-docker -y
+gcloud config set project jesse-hosted
 docker tag "$SOURCE_CONTAINER" us.gcr.io/jesse-hosted/"$DOCKER_REPO:$TAG_LATEST"
-docker push us.gcr.io/jesse-hosted/"$DOCKER_REPO:$TAG_LATEST"
+gcloud docker -- push us.gcr.io/jesse-hosted/"$DOCKER_REPO:$TAG_LATEST"
