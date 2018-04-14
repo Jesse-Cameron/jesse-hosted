@@ -21,8 +21,6 @@ before_script:
 - chmod +x ./scripts/*
 - "./scripts/build.sh"
 - export GOOGLE_APPLICATION_CREDENTIALS=jesse-hosted-key.json
-- ls
-- printenv
 script:
 - docker-compose -f docker-compose.test.yml build
 - docker-compose -f docker-compose.test.yml run jesse-hosted-test mix test
