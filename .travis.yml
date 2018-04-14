@@ -19,8 +19,9 @@ before_script:
 - source /home/travis/google-cloud-sdk/path.bash.inc
 - gcloud version
 - chmod +x ./scripts/*
-- ./scripts/build.sh
+- "./scripts/build.sh"
 - export GOOGLE_APPLICATION_CREDENTIALS=jesse-hosted-key.json
+- ls
 - printenv
 script:
 - docker-compose -f docker-compose.test.yml build
