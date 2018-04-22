@@ -1,6 +1,15 @@
 {
   "albums": [
     {
+      "title": "acatenango y nevado de toluca",
+      "album_number": 1,
+      "album_id": "e348242a-d232-4dc4-8255-7e4e99b27cde",
+      "folder_name": "acatenango",
+      "date": "2018-01-22",
+      "cover_image": "8.jpg",
+      "subtitle": ""
+    },
+    {
       "title": "misty mt.macedon",
       "album_number": 3,
       "album_id": "3e287acc-274c-4cf5-906c-93e1d6a2d204",
