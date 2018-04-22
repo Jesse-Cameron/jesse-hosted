@@ -22,7 +22,6 @@
 <body>
 <div class="index-canvas">
     <div class="index-content">
-        
         <div class="index-sidebar">
             <div class="sidebar-header">
                 <p>courtesy of jesse</p>
@@ -30,6 +29,9 @@
             <div class="sidebar-btn">☰</div>
             <div class="sidebar-links">
                 <p><%= link("home", to: "/home")%></p>
+                <p><%= link("acatenango y nevado de toluca", to: "/album/acatenango")%></p>
+                <p><%= link("burnt red cities", to: "/album/red_cities")%></p>
+                <p><%= link("misty mt. macedon", to: "/album/macedon")%></p>
                 <p><%= link("derelict", to: "/album/derelict")%></p>
                 <p><%= link("a wicked bushland", to: "/album/bushland")%></p>
                 <p><%= link("furred friends", to: "/album/furred_friends")%></p>
