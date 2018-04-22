@@ -30,6 +30,7 @@
             <div class="sidebar-links">
                 <p><%= link("home", to: "/home")%></p>
                 <p><%= link("acatenango y nevado de toluca", to: "/album/acatenango")%></p>
+                <p><%= link("burnt red cities", to: "/album/red_cities")%></p>
                 <p><%= link("misty mt. macedon", to: "/album/macedon")%></p>
                 <p><%= link("derelict", to: "/album/derelict")%></p>
                 <p><%= link("a wicked bushland", to: "/album/bushland")%></p>

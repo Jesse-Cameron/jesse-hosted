@@ -13,7 +13,7 @@ p {
         max-width: 1200px;
         display: grid;
         justify-content: center;
-        grid-template-columns: minmax(200px, 0.11111111fr) minmax(500px, 66.66666vh) minmax(200px, 0.11111111fr);
+        grid-template-columns: minmax(200px, 0.11111111fr) minmax(800px, 66.66666vh) minmax(200px, 0.11111111fr);
         grid-column-gap: 4.2rem;
 
         .index-sidebar {
@@ -202,7 +202,7 @@ p {
 @media only screen and (min-width: 1350px) {
     .index-canvas {
         .index-content {
-            grid-template-columns: minmax(200px, 0.11111111fr) minmax(600px, 66.66666vh) minmax(200px, 0.11111111fr);
+            grid-template-columns: minmax(200px, 0.11111111fr) minmax(700px, 66.66666vh) minmax(200px, 0.11111111fr);
         }
     }
 }
