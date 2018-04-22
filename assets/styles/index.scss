@@ -9,10 +9,8 @@ p {
 
     .index-content {
         //border: 1px solid $border-colour;
-
         width: 90vw;
         max-width: 1200px;
-
         display: grid;
         justify-content: center;
         grid-template-columns: minmax(200px, 0.11111111fr) minmax(500px, 66.66666vh) minmax(200px, 0.11111111fr);
@@ -33,12 +31,15 @@ p {
                 padding-left: 5px;
                 padding-right: 5px;
                 background-color: black;
+
                 > p {
-                    padding-top: 5px;
-                    padding-bottom: 5px;
+                    padding-top: 15px;
+                    padding-bottom: 15px;
                     color: white;
                     text-align: center;
-                    font-size: 1.3rem;
+                    font-size: 1.4rem;
+                    letter-spacing: 0.4rem;
+                    font-weight: 600;
                     font-family: $emp-font-stack;
                 }
             }
@@ -54,7 +55,6 @@ p {
 
         .index-mainbar {
             //border: 1px solid $border-colour;
-
             padding-top: $gap-spacing;
             position: relative;
             
@@ -91,22 +91,22 @@ p {
             }
             
             .photo-series {
+                border-bottom: 1px solid $divider-line-colour;
+                margin-bottom: $gap-spacing;
 
                 a {
                     text-decoration: none;
                     color: $index-font-colour;
                 }
-                border-bottom: 1px solid $divider-line-colour;
-                margin-bottom: $gap-spacing;
                 
                 .title {
+                    margin-bottom: 0.2rem;
                     h3 {
                         font-style: normal;
                         letter-spacing: 0.25rem;
                         font-size: 1.2rem;
                         margin: 0;
                     }
-                    margin-bottom: 0.2rem;
                 }
 
                 img {
@@ -127,8 +127,8 @@ p {
 @media only screen and (min-width: 320px) and (max-width: 700px) {
     .index-canvas {
         .index-content {
-
             grid-template-columns: repeat(auto-fit, 100%);
+            
             .index-sidebar {
                 border-right: none;
                 margin-top: -3rem;
@@ -150,6 +150,14 @@ p {
                 .sidebar-header {
                     transform: translateY(1.5rem);
                     margin-bottom: -1.4rem;
+
+                    > p {
+                        padding-top: 5px;
+                        padding-bottom: 5px;
+                        font-size: 1.2rem;
+                        letter-spacing: 0.15rem;
+                        font-weight: 700;
+                    }
                 }
 
                 .sidebar-links {
@@ -167,7 +175,6 @@ p {
                 }
             
                 &:hover {
-
                     > .sidebar-links {
                         height: auto;
                         visibility: visible;
@@ -184,7 +191,6 @@ p {
 
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-width: 700px) and (max-width: 1350px) {
-  
     .index-canvas {
         .index-content {
             grid-template-columns: minmax(200px, 0.11111111fr) minmax(400px, 66.66666vh);
@@ -208,7 +214,6 @@ only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 1300px)
 only screen and (        min-device-pixel-ratio: 2)      and (min-width: 1300px),
 only screen and (                min-resolution: 192dpi) and (min-width: 1300px),
 only screen and (                min-resolution: 2dppx)  and (min-width: 1300px) { 
-
     /* Large screen, retina, stuff to override above media query */
     .index-canvas {
         .index-content {
