@@ -26,25 +26,34 @@ p {
             .sidebar-btn {
                 display: none;
             }
-        
-            .sidebar-header {
-                padding-left: 5px;
-                padding-right: 5px;
-                background-color: black;
 
-                > p {
-                    padding-top: 15px;
-                    padding-bottom: 15px;
-                    color: white;
-                    text-align: center;
-                    font-size: 1.4rem;
-                    letter-spacing: 0.4rem;
-                    font-weight: 600;
-                    font-family: $emp-font-stack;
+            a {
+                text-decoration: none;
+
+                .sidebar-header {
+                    display: block;
+                    padding-left: 5px;
+                    padding-right: 5px;
+                    background-color: black;
+    
+                    > p {
+                        padding-top: 15px;
+                        padding-bottom: 15px;
+                        color: white;
+                        text-align: center;
+                        font-size: 1.4rem;
+                        letter-spacing: 0.4rem;
+                        font-weight: 600;
+                        font-family: $emp-font-stack;
+                    }
                 }
             }
+
             
             .sidebar-links {
+                a {
+                    text-decoration: underline;
+                }
                 > p {
                     text-align: right;
                     font-style: italic;
@@ -120,7 +129,7 @@ p {
                 }
             }
         }
-  }
+    }
 }
 
 /* Smartphones (portrait and landscape) ----------- */
@@ -144,21 +153,24 @@ p {
                     position: relative;
                     text-align: left;
                     padding-left: 1rem;
-                    margin-top: -0.15rem;
+                    margin-top: 0.1rem;
                 }
 
-                .sidebar-header {
-                    transform: translateY(1.5rem);
-                    margin-bottom: -1.4rem;
-
-                    > p {
-                        padding-top: 5px;
-                        padding-bottom: 5px;
-                        font-size: 1.2rem;
-                        letter-spacing: 0.15rem;
-                        font-weight: 700;
+                a {
+                    .sidebar-header {
+                        transform: translateY(1.5rem);
+                        margin-bottom: -1.4rem;
+                        
+                        > p {
+                            padding-top: 5px;
+                            padding-bottom: 5px;
+                            font-size: 1.2rem;
+                            letter-spacing: 0.15rem;
+                            font-weight: 700;
+                        }
                     }
                 }
+
 
                 .sidebar-links {
                     visibility: hidden;

@@ -23,9 +23,11 @@
 <div class="index-canvas">
     <div class="index-content">
         <div class="index-sidebar">
-            <div class="sidebar-header">
-                <p>courtesy of jesse</p>
-            </div>
+            <%= link to: "/home" do %>
+                <span class="sidebar-header" >
+                    <p>courtesy of jesse</p>
+                </span>
+            <% end %>
             <div class="sidebar-btn">☰</div>
             <div class="sidebar-links">
                 <p><%= link("home", to: "/home")%></p>
