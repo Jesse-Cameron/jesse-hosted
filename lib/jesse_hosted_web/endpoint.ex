@@ -11,7 +11,7 @@ defmodule JesseHostedWeb.Endpoint do
     Plug.Static,
     at: "/",
     from: :jesse_hosted,
-    gzip: false,
+    gzip: true,
     only: ~w(css fonts images js favicon.ico robots.txt)
   )
 
