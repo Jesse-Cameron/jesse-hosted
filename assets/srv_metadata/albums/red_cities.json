@@ -33,7 +33,27 @@
       {
         "file": "6.jpg",
         "title": "",
+        "alt_text": "CDMX"
+      },
+      {
+        "file": "7.jpg",
+        "title": "",
         "alt_text": "antigua"
+      },
+      {
+        "file": "8.jpg",
+        "title": "",
+        "alt_text": "antigua"
+      },
+      {
+        "file": "9.jpg",
+        "title": "",
+        "alt_text": "Chichen-Itza"
+      },
+      {
+        "file": "10.jpg",
+        "title": "",
+        "alt_text": "CDMX"
       }
     ]
   }
