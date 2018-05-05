@@ -32,7 +32,7 @@
       },
       {
         "file": "6.jpg",
-        "title": "mid-erruption",
+        "title": "",
         "alt_text": "acatenango"
       },
       {
@@ -42,11 +42,21 @@
       },
       {
         "file": "8.jpg",
-        "title": "",
+        "title": "mid-erruption",
         "alt_text": "acatenango"
       },
       {
         "file": "9.jpg",
+        "title": "",
+        "alt_text": "acatenango"
+      },
+      {
+        "file": "10.jpg",
+        "title": "",
+        "alt_text": "acatenango"
+      },
+      {
+        "file": "11.jpg",
         "title": "",
         "alt_text": "acatenango"
       }
