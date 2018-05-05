@@ -20,19 +20,18 @@ before_script:
 - gcloud version
 - chmod +x ./scripts/*
 - "./scripts/build.sh"
+- export GOOGLE_APPLICATION_CREDENTIALS=jesse-hosted-key.json
 script:
 - docker-compose -f docker-compose.test.yml build
 - docker-compose -f docker-compose.test.yml run jesse-hosted-test mix test
 deploy:
 - provider: script
   skip_cleanup: true
-  script: scripts/deploy.sh ${DOCKER_USER} ${DOCKER_PASSWORD} ${CONTAINER_IMAGE} ${DOCKER_REPO}
-    ${BRANCH} ${VERSION}
+  script: scripts/deploy.sh ${CONTAINER_IMAGE} ${DOCKER_REPO} ${BRANCH} ${VERSION}
   on:
     branch: develop
 - provider: script
   skip_cleanup: true
-  script: scripts/deploy.sh ${DOCKER_USER} ${DOCKER_PASSWORD} ${CONTAINER_IMAGE} ${DOCKER_REPO}
-    ${BRANCH} ${VERSION}
+  script: scripts/deploy.sh ${CONTAINER_IMAGE} ${DOCKER_REPO} ${BRANCH} ${VERSION}
   on:
     branch: master
