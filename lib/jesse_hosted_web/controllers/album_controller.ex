@@ -9,8 +9,15 @@ defmodule JesseHostedWeb.AlbumController do
   end
 
   def album(conn, %{"name" => file_name}) do
-    album_map = read_json_to_map("albums/" <> file_name <> ".json") |> to_image_map()
-    render(conn, "index.html", album_map: album_map)
+    try do
+      album_map = read_json_to_map("albums/" <> file_name <> ".json") |> to_image_map()
+      render(conn, "index.html", album_map: album_map)
+    rescue
+      RuntimeError ->
+        conn = conn
+          |> Phoenix.Controller.render(JesseHostedWeb.ErrorView, "404.html")
+          |> halt()
+    end
   end
 
   def to_image_map(album_map) do

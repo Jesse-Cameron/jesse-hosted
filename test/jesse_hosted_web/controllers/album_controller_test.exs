@@ -55,4 +55,9 @@ defmodule JesseHostedWeb.AlbumControllerTest do
 
     assert result_map == expected_map
   end
+
+
+  test "GET /album/fakeAlbum - should return a 404" do
+    
+  end
 end
