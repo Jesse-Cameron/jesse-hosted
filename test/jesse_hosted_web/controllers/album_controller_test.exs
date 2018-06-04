@@ -56,8 +56,9 @@ defmodule JesseHostedWeb.AlbumControllerTest do
     assert result_map == expected_map
   end
 
-
-  test "GET /album/fakeAlbum - should return a 404" do
-    
+  test "GET /album/fakeAlbum - should throw an error" do
+    assert_raise JesseHostedWeb.FileHelper.AlbumNotFoundError, fn ->
+      conn = get(conn, "album/fakeAlbum")
+    end
   end
 end
