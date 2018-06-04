@@ -1,10 +1,8 @@
 defmodule JesseHostedWeb.ErrorView do
   use JesseHostedWeb, :view
 
-  def render("404.html", _assigns) do
-    #render("404_page.html", %{})
-
-    "404"
+  def render("404.html", assigns) do
+    render("404_page.html", assigns)
   end
 
   def render("500.html", _assigns) do
