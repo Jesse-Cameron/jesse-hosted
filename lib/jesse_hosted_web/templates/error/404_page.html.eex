@@ -21,8 +21,17 @@
   gtag('config', 'UA-113926026-1');
 </script>
 <body>
-    <div class="container">
-        <h2>404 - this doesn't seem to work sorry</h2>
+    <div class="error-mainbar">
+        <div class="error-message-content">
+            <h2>Yeahhhh, the page you're looking for doesn't exist.</h2>
+            <p>So stop trying to make <code>'http://jesse.im<%= @conn.request_path%>'</code> happen. It's not going to happen</p>
+            <p>But while you are here, you may as well check out some of these links:</p>
+            <ul>
+                <li>link 1</li>
+                <li>link 2</li>
+                <li>link 3</li>
+            </ul>
+        </div>
     </div>
 
 </body>

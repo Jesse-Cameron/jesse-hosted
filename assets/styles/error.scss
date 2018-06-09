@@ -1,0 +1,16 @@
+.error-mainbar {
+    display: flex;
+    justify-content: center;
+    color: $index-font-colour;
+
+    .error-message-content {
+        border: 1px solid $border-colour;
+        width: 80vw;
+        padding: 2rem;
+        justify-content: center;
+
+        code {
+            color: red;
+        }
+    }
+}
