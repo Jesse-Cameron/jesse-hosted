@@ -23,15 +23,19 @@
 <body>
     <div class="error-mainbar">
         <div class="error-message-content">
-            <h2>Yeahhhh, the page you're looking for doesn't exist.</h2>
-            <img src="<%= static_path(@conn, "/images/404.jpg") %>">
-            <p>So stop trying to make <code>'http://jesse.im<%= @conn.request_path%>'</code> happen. It's not going to happen</p>
-            <p>But while you are here, you may as well check out some of these pages:</p>
-
+            <h2>yeahhhh, the page you're looking for doesn't exist.</h2>
+            <div class="error-image">
+                <img src="<%= static_path(@conn, "/images/404.jpg") %>">
+                <div class="error-image-message">
+                    <p>stop trying to make <code>'http://jesse.im<%= @conn.request_path%>'</code> happen. it's not going to happen<p>
+                </div>
+            </div>
+            </br>
+            <p>but while you're here, may as well check out these albums:</p>
             <ul>
             <%= for page <- get_recommended_links() do %>
                 <li><%= link(page["title"], to: "/album/#{get_album_route(page["folder_name"])}")%></li>
-            <%= end %>
+            <% end %>
             </ul>
         </div>
     </div>
