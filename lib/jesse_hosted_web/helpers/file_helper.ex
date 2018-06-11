@@ -3,11 +3,11 @@ defmodule JesseHostedWeb.FileHelper do
   a helper for accessing, reading and parsing various file types 
   """
 
-  defmodule AlbumNotFoundError do
+  defmodule FileNotFoundError do
     defexception [:message, :plug_status]
   
     def exception(_) do
-      %__MODULE__{message: "Album Not Found", plug_status: 404}
+      %__MODULE__{message: "File Not Found", plug_status: 404}
     end
   end
 
@@ -16,7 +16,7 @@ defmodule JesseHostedWeb.FileHelper do
 
     case File.read(album_path) do
       {:ok, body} -> Poison.Parser.parse!(body)
-      {:error, response} -> raise AlbumNotFoundError
+      {:error, response} -> raise FileNotFoundError
     end
   end
 end
