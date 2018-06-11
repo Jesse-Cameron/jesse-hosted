@@ -24,33 +24,41 @@
         }
 
         .error-image {
-            
+            border: 1px solid $border-colour;
+            position: relative;
+
             img {
                 width: 100%;
                 object-fit: cover;
-                min-height: 200px;
+                min-height: 180px;
             }
 
             .error-image-message {
+                border: 1px solid $border-colour;
+                position: absolute;
+
+                display: -webkit-flex; /* Safari */
+                -webkit-align-items: center; /* Safari 7.0+ */
+                display: inline-flex;
+                align-items: flex-end;
+                justify-content: center;
+                width: 100%;
+                top: 0;
+                height: 100%;
                 
                 p {
-                    position: relative;
                     margin-left: 2rem;
                     margin-right: 2rem;
-                    margin-top: -3em;
-                    margin-bottom: 3rem;
+                    max-width: 90%;
                     
                     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
                     color: rgb(255, 204, 0);
                     font-size: 1.2rem;
                     font-weight: bold;
                     text-align: center;
+                    word-wrap: break-word;
                 }
             }
-
-        }
-        br + p {
-            margin-top: 3rem;
         }
     }
 }
@@ -59,10 +67,12 @@
 @media only screen and (min-width: 320px) and (max-width: 700px) {
     .error-mainbar {
         .error-message-content {
+            width: 90vw;
+            padding: 1rem;
             .error-image {
                 .error-image-message {
                     p {
-                        margin-top: -5rem;
+                        
                         font-size: 1rem;
                     }
                 }

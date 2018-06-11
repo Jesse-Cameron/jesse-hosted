@@ -27,10 +27,9 @@
             <div class="error-image">
                 <img src="<%= static_path(@conn, "/images/404.jpg") %>">
                 <div class="error-image-message">
-                    <p>stop trying to make <code>'http://jesse.im<%= @conn.request_path%>'</code> happen. it's not going to happen<p>
+                    <p>stop trying to make <code>jesse.im<%= @conn.request_path%></code> happen. it's not going to happen</p>
                 </div>
             </div>
-            </br>
             <p>but while you're here, may as well check out these albums:</p>
             <ul>
             <%= for page <- get_recommended_links() do %>
