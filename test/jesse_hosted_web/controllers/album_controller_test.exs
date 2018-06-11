@@ -57,7 +57,7 @@ defmodule JesseHostedWeb.AlbumControllerTest do
   end
 
   test "GET /album/fakeAlbum - should throw an error" do
-    assert_raise JesseHostedWeb.FileHelper.AlbumNotFoundError, fn ->
+    assert_raise JesseHostedWeb.FileHelper.FileNotFoundError, fn ->
       conn = get(conn, "album/fakeAlbum")
     end
   end
