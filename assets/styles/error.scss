@@ -38,13 +38,14 @@
                 position: absolute;
 
                 display: -webkit-flex; /* Safari */
-                -webkit-align-items: center; /* Safari 7.0+ */
+                -webkit-align-items: flex-end; /* Safari 7.0+ */
                 display: inline-flex;
                 align-items: flex-end;
                 justify-content: center;
                 width: 100%;
-                top: 0;
                 height: 100%;
+                top: 0;
+                left: 0;
                 
                 p {
                     margin-left: 2rem;
