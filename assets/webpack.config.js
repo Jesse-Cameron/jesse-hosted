@@ -27,7 +27,6 @@ module.exports = {
     new CopyWebpackPlugin([
       { from: 'static/*', to: '../' },
       { from: 'static/images/**/*', to: '../' },
-      { from: 'images/**/*', to: './'}
     ]),
   ],
   entry: "./js/app.js",
