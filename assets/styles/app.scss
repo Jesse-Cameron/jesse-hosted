@@ -5,5 +5,7 @@ body {
     font-family: $default-font-stack;
     background-color: $background-light;
 }
+
+@import "error";
 @import "landing";
 @import "index";

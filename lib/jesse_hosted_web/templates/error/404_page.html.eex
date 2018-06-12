@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Plz enjoy my lil snaps">
+    <meta name="author" content="Jesse Cameron">
+
+    <title>uh oh ...</title>
+    <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
+    <link rel="shortcut icon" type="image/x-icon" href="<%= static_path(@conn, "/favicon.ico") %>">
+</head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113926026-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113926026-1');
+</script>
+<body>
+    <div class="error-mainbar">
+        <div class="error-message-content">
+            <h2>yeahhhh, the page you're looking for doesn't exist.</h2>
+            <div class="error-image">
+                <img src="<%= static_path(@conn, "/images/404.jpg") %>">
+                <div class="error-image-message">
+                    <p>stop trying to make <code>jesse.im<%= @conn.request_path%></code> happen. it's not going to happen</p>
+                </div>
+            </div>
+            <p>but while you're here, may as well check out these albums:</p>
+            <ul>
+            <%= for page <- get_recommended_links() do %>
+                <li><%= link(page["title"], to: "/album/#{get_album_route(page["folder_name"])}")%></li>
+            <% end %>
+            </ul>
+        </div>
+    </div>
+
+</body>
