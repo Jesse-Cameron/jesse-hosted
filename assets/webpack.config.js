@@ -12,13 +12,13 @@ module.exports = {
     rules: [{
       test: /\.scss$/,
       use: extractSass.extract({
-          use: [{
-              loader: "css-loader" // creates style nodes from JS strings
-          }, {
-              loader: "sass-loader" // translates CSS into CommonJS
-          }],
-          // use style-loader in development
-          //fallback: "style-loader",
+        use: [{
+          loader: "css-loader" // creates style nodes from JS strings
+        }, {
+          loader: "sass-loader" // translates CSS into CommonJS
+        }],
+        // use style-loader in development
+        // fallback: "style-loader",
       })
     }]
   },
@@ -27,6 +27,7 @@ module.exports = {
     new CopyWebpackPlugin([
       { from: 'static/*', to: '../' },
       { from: 'static/images/**/*', to: '../' },
+      { from: 'images/**/*', to: './'}
     ]),
   ],
   entry: "./js/app.js",
