@@ -39,6 +39,7 @@ defmodule JesseHosted.Mixfile do
       {:poison, "~> 3.1"},
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
+      {:plug_cowboy, "~> 1.0"},
       {:google_api_storage, "~> 0.0.1"},
       {:goth, "~> 0.7.2"}
     ]
