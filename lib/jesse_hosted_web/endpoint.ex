@@ -1,7 +1,8 @@
 defmodule JesseHostedWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :jesse_hosted
 
-  socket("/socket", JesseHostedWeb.UserSocket)
+  socket "/socket", JesseHostedWeb.UserSocket,
+    websocket: true
 
   # Serve at "/" the static files from "priv/static" directory.
   #
