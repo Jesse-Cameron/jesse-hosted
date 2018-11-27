@@ -8,8 +8,8 @@
     <meta name="author" content="Jesse Cameron">
 
     <title>uh oh ...</title>
-    <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
-    <link rel="shortcut icon" type="image/x-icon" href="<%= static_path(@conn, "/favicon.ico") %>">
+    <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>">
+    <link rel="shortcut icon" type="image/x-icon" href="<%= Routes.static_path(@conn, "/favicon.ico") %>">
 </head>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113926026-1"></script>
@@ -25,7 +25,7 @@
         <div class="error-message-content">
             <h2>yeahhhh, the page you're looking for doesn't exist.</h2>
             <div class="error-image">
-                <img src="<%= static_path(@conn, "/images/404.jpg") %>">
+                <img src="<%= Routes.static_path(@conn, "/images/404.jpg") %>">
                 <div class="error-image-message">
                     <p>stop trying to make <code>jesse.im<%= @conn.request_path%></code> happen. it's not going to happen</p>
                 </div>
