@@ -7,7 +7,7 @@
 
     <%= for photo <- @album_map["images"] do %>
         <div class="photo-series">
-            <%= img_tag(photo["file"], alt: alt=photo["alt_text"], title: title=photo["alt_text"]) %>
+            <%= img_tag(photo["file"], alt: photo["alt_text"], title: photo["alt_text"]) %>
             <div class="subtitle"><%= photo["title"] %></div>
         </div>
     <% end %>
