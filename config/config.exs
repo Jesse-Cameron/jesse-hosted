@@ -12,6 +12,9 @@ config :jesse_hosted, JesseHostedWeb.Endpoint,
   render_errors: [view: JesseHostedWeb.ErrorView, accepts: ~w(html json)],
   pubsub: [name: JesseHosted.PubSub, adapter: Phoenix.PubSub.PG2]
 
+# Use Jason for JSON parsing in Phoenix
+config :phoenix, :json_library, Jason
+
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",

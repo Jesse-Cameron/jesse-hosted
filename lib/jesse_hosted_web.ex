@@ -21,8 +21,8 @@ defmodule JesseHostedWeb do
     quote do
       use Phoenix.Controller, namespace: JesseHostedWeb
       import Plug.Conn
-      import JesseHostedWeb.Router.Helpers
       import JesseHostedWeb.Gettext
+      alias JesseHostedWeb.Router.Helpers, as: Routes
     end
   end
 
@@ -39,7 +39,7 @@ defmodule JesseHostedWeb do
       # Use all HTML functionality (forms, tags, etc)
       use Phoenix.HTML
 
-      import JesseHostedWeb.Router.Helpers
+      alias JesseHostedWeb.Router.Helpers, as: Routes
       import JesseHostedWeb.ErrorHelpers
       import JesseHostedWeb.Gettext
     end

@@ -14,6 +14,8 @@ config :jesse_hosted, JesseHostedWeb.Endpoint,
   watchers: [
     node: [
       "node_modules/webpack/bin/webpack.js",
+      "--mode",
+      "development",
       "--watch-stdin",
       "--progress",
       "--color",

@@ -6,8 +6,8 @@
     <meta name="author" content="Jesse Cameron">
     <meta name="description" content="Plz enjoy my lil snaps">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
-    <link rel="shortcut icon" type="image/x-icon" href="<%= static_path(@conn, "/favicon.ico") %>">
+    <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>">
+    <link rel="shortcut icon" type="image/x-icon" href="<%= Routes.static_path(@conn, "/favicon.ico") %>">
 </head>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113926026-1"></script>
@@ -55,6 +55,6 @@
         </div>
     </div>
 </div>
-<script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+<script src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
 </body>
 </html>
