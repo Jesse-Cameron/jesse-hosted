@@ -4,7 +4,7 @@ defmodule JesseHosted.Mixfile do
   def project do
     [
       app: :jesse_hosted,
-      version: "1.1.1",
+      version: "1.1.2",
       elixir: "~> 1.7",
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: [:phoenix, :gettext] ++ Mix.compilers(),
@@ -40,9 +40,7 @@ defmodule JesseHosted.Mixfile do
       {:jason, "~> 1.0"},
       {:gettext, "~> 0.11"},
       {:plug, "~> 1.7"},
-      {:plug_cowboy, "~> 2.0"},
-      {:google_api_storage, "~> 0.0.1"},
-      {:goth, "~> 0.7.2"}
+      {:plug_cowboy, "~> 2.0"}
     ]
   end
 end

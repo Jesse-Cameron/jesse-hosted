@@ -16,7 +16,7 @@ defmodule JesseHostedWeb.FileHelper do
 
     case File.read(album_path) do
       {:ok, body} -> Poison.Parser.parse!(body)
-      {:error, response} -> raise FileNotFoundError
+      {:error, _response} -> raise FileNotFoundError
     end
   end
 end
