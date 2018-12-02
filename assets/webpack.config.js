@@ -32,17 +32,19 @@ module.exports = {
     ]
   },
   plugins: [
+    // extract css
     new MiniCssExtractPlugin({
-      filename: 'style.css'
+      filename: '../../static/css/app.css'
     }),
+    // move static assets and images
     new CopyWebpackPlugin([
-      { from: 'static/*', to: '../' },
-      { from: 'static/images/**/*', to: '../' },
-    ]),
+      { from: 'static/*', to: '../../' },
+      { from: 'static/images/**/*', to: '../../' },
+    ])
   ],
   entry: "./js/app.js",
   output: {
-    path: path.join(__dirname, "../priv/static/"),
-    filename: "js/app.js"
+    path: path.join(__dirname, "../priv/static/js/"),
+    filename: "app.js"
   }
 };
