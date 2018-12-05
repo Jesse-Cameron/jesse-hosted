@@ -13,7 +13,7 @@ defmodule JesseHostedWeb.Endpoint do
     at: "/",
     from: :jesse_hosted,
     gzip: true,
-    only: ~w(css fonts images js favicon.ico robots.txt)
+    only_matching: ~w(css fonts images js favicon robots.txt)
   )
 
   # Code reloading can be explicitly enabled under the
