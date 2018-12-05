@@ -1,11 +1,10 @@
-FROM bitwalker/alpine-elixir-phoenix
+FROM bitwalker/alpine-elixir-phoenix:latest
 
 ARG MIX_ENV
-ARG GCP_JSON
 
 # Set exposed ports
 EXPOSE 80
-ENV PORT=80 MIX_ENV=${MIX_ENV} GOOGLE_APPLICATION_CREDENTIALS=${GCP_JSON}
+ENV PORT=80 MIX_ENV=${MIX_ENV}
 
 # Cache elixir deps
 ADD mix.exs mix.lock ./
