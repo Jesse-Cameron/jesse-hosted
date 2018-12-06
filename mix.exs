@@ -4,8 +4,8 @@ defmodule JesseHosted.Mixfile do
   def project do
     [
       app: :jesse_hosted,
-      version: "1.0.4",
-      elixir: "~> 1.4",
+      version: "1.1.3",
+      elixir: "~> 1.7",
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: [:phoenix, :gettext] ++ Mix.compilers(),
       start_permanent: Mix.env() == :prod,
@@ -32,15 +32,15 @@ defmodule JesseHosted.Mixfile do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
-      {:phoenix, "~> 1.3.0"},
+      {:phoenix, "~> 1.4.0"},
       {:phoenix_pubsub, "~> 1.0"},
       {:phoenix_html, "~> 2.10"},
       {:phoenix_live_reload, "~> 1.0", only: :dev},
       {:poison, "~> 3.1"},
+      {:jason, "~> 1.0"},
       {:gettext, "~> 0.11"},
-      {:cowboy, "~> 1.0"},
-      {:google_api_storage, "~> 0.0.1"},
-      {:goth, "~> 0.7.2"}
+      {:plug, "~> 1.7"},
+      {:plug_cowboy, "~> 2.0"}
     ]
   end
 end

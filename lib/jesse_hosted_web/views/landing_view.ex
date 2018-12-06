@@ -4,7 +4,7 @@ defmodule JesseHostedWeb.LandingView do
   alias JesseHostedWeb.GoogleStorageHelper
 
   def get_image_url(number_list, index) do
-    {file_number, list} = List.pop_at(number_list, index)
+    {file_number, _list} = List.pop_at(number_list, index)
     GoogleStorageHelper.image_url("landing", "#{file_number}.jpg")
   end
 

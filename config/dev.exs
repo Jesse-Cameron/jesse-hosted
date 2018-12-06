@@ -8,12 +8,14 @@ use Mix.Config
 # with brunch.io to recompile .js and .css sources.
 config :jesse_hosted, JesseHostedWeb.Endpoint,
   http: [port: 4000],
-  debug_errors: true,
+  debug_errors: false,
   code_reloader: true,
   check_origin: false,
   watchers: [
     node: [
       "node_modules/webpack/bin/webpack.js",
+      "--mode",
+      "development",
       "--watch-stdin",
       "--progress",
       "--color",

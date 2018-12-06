@@ -1,7 +1,8 @@
 defmodule JesseHostedWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :jesse_hosted
 
-  socket("/socket", JesseHostedWeb.UserSocket)
+  socket "/socket", JesseHostedWeb.UserSocket,
+    websocket: true
 
   # Serve at "/" the static files from "priv/static" directory.
   #
@@ -12,7 +13,7 @@ defmodule JesseHostedWeb.Endpoint do
     at: "/",
     from: :jesse_hosted,
     gzip: true,
-    only: ~w(css fonts images js favicon.ico robots.txt)
+    only_matching: ~w(css fonts images js favicon robots.txt)
   )
 
   # Code reloading can be explicitly enabled under the
