@@ -2,3 +2,4 @@ _build
 deps
 priv
 assets/node_modules
+.git*

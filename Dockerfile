@@ -18,7 +18,8 @@ ADD . .
 RUN cd assets && \
     npm run deploy && \
     cd - && \
-    mix do compile, phx.digest
+    mix do compile, phx.digest && \
+    rm -rf /tmp
 
 FROM bitwalker/alpine-elixir:latest
 ARG MIX_ENV=prod
