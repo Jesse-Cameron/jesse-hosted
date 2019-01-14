@@ -32,6 +32,7 @@
             <div class="sidebar-btn">☰</div>
             <div class="sidebar-links">
                 <p><%= link("home", to: "/home")%></p>
+                <p><%= link("perennial", to: "/album/perennial")%></p>
                 <p><%= link("western australia", to: "/album/western_australia")%></p>
                 <p><%= link("acatenango y nevado de toluca", to: "/album/acatenango")%></p>
                 <p><%= link("burnt red cities", to: "/album/red_cities")%></p>
