@@ -1,10 +1,7 @@
-FROM bitwalker/alpine-elixir-phoenix:latest
+FROM bitwalker/alpine-elixir-phoenix:latest AS phx-build 
+ARG MIX_ENV=prod
 
-ARG MIX_ENV
-
-# Set exposed ports
-EXPOSE 80
-ENV PORT=80 MIX_ENV=${MIX_ENV}
+ENV MIX_ENV=${MIX_ENV}
 
 # Cache elixir deps
 ADD mix.exs mix.lock ./
@@ -22,5 +19,15 @@ RUN cd assets && \
     npm run deploy && \
     cd - && \
     mix do compile, phx.digest
+
+FROM bitwalker/alpine-elixir:latest
+ARG MIX_ENV=prod
+ARG PORT=80
+
+# Set exposed ports
+EXPOSE ${PORT}
+ENV PORT=${PORT} MIX_ENV=${MIX_ENV}
+
+COPY --from=phx-build /opt/app /opt/app
 
 CMD ["mix", "phx.server"]
