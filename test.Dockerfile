@@ -19,8 +19,7 @@ RUN cd assets && \
     npm run deploy && \
     cd - && \
     mix do compile, phx.digest && \
-    rm -rf /tmp && \
-    rm -rf assets/node_modules
+    rm -rf /tmp
 
 FROM bitwalker/alpine-elixir:latest
 ARG MIX_ENV=prod
@@ -30,13 +29,6 @@ ARG PORT=80
 EXPOSE ${PORT}
 ENV PORT=${PORT} MIX_ENV=${MIX_ENV}
 
-COPY --from=phx-build /opt/app/_build /opt/app/_build
-COPY --from=phx-build /opt/app/priv /opt/app/priv
-COPY --from=phx-build /opt/app/config /opt/app/config
-COPY --from=phx-build /opt/app/assets /opt/app/assets
-COPY --from=phx-build /opt/app/lib /opt/app/lib
-COPY --from=phx-build /opt/app/deps /opt/app/deps
-COPY --from=phx-build /opt/app/.mix /opt/app/.mix
-COPY --from=phx-build /opt/app/mix.* /opt/app/
+COPY --from=phx-build /opt/app/ /opt/app/
 
 CMD ["mix", "phx.server"]
