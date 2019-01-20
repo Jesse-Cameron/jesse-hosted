@@ -29,5 +29,6 @@ npm-debug.log
 
 # personal
 .vscode
+.elixir_ls
 
 jesse-hosted-*.json

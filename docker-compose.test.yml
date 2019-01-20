@@ -3,6 +3,7 @@ services:
   jesse-hosted-test:
     build: 
       context: .
+      dockerfile: test.Dockerfile
       args:
         - MIX_ENV=test
         - GCP_JSON=${GOOGLE_APPLICATION_CREDENTIALS}
