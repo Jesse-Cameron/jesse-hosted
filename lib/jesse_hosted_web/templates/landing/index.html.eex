@@ -8,16 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>">
     <link rel="shortcut icon" type="image/x-icon" href="<%= Routes.static_path(@conn, "/favicon.ico") %>">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113926026-1"></script>
+    <script src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
 </head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113926026-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-113926026-1');
-</script>
 </body>
 <div class="landing-banner">
     <div class="content">
@@ -55,6 +48,12 @@
         </div>
     </div>
 </div>
-<script src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113926026-1');
+</script>
 </body>
 </html>

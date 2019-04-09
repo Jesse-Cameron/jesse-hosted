@@ -10,16 +10,9 @@
     <title><%= title() %></title>
     <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>">
     <link rel="shortcut icon" type="image/x-icon" href="<%= Routes.static_path(@conn, "/favicon.ico") %>">
+    <script async src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113926026-1"></script>
 </head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113926026-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-113926026-1');
-</script>
 <body>
 <div class="index-canvas">
     <div class="index-content">
@@ -48,6 +41,11 @@
         <%= render @view_module, @view_template, assigns %>
     </div>
 </div>
-<script src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-113926026-1');
+</script>
 </body>
 </html>
