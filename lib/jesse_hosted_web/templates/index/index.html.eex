@@ -3,7 +3,10 @@
         <div class="photo-series">
             <%= link to: "/album/#{get_album_route(album_key["folder_name"])}" do %>
                 <div class="title"><h3><%= album_key["title"] %></h3></div>
-                <img src="<%= album_key["cover_image"]%>"/>
+                <%= img_tag(album_key["cover_image_url"],
+                    srcset: "#{get_srcset_filename(album_key["folder_name"], album_key["cover_image"], "380w")} 380w, #{get_srcset_filename(album_key["folder_name"], album_key["cover_image"], "480w")} 480w, #{get_srcset_filename(album_key["folder_name"], album_key["cover_image"], "700w")} 700w",
+                    sizes: "(max-width: 380px) 340px, (max-width: 480px) 440px, 700px"
+                )%>
             <% end %>
             <div class="subtitle"><%= album_key["subtitle"] %></div>
         </div>
