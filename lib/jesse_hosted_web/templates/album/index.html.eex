@@ -1,5 +1,4 @@
 <div class="index-mainbar">
-
     <div class="series-header">
         <h3><%= @album_map["title"] %></h3>
         <p><%= @album_map["subtitle"]%><p>
@@ -8,10 +7,7 @@
     <%= for photo <- @album_map["images"] do %>
         <div class="photo-series">
             <%= img_tag(photo["url"],
-                srcset: "#{get_srcset_filename(@album_map["folder_name"], photo["file"], "380w")} 380w, #{get_srcset_filename(@album_map["folder_name"], photo["file"], "480w")} 480w, #{get_srcset_filename(@album_map["folder_name"], photo["file"], "700w")} 700w",
-                sizes: "(max-width: 380px) 340px, (max-width: 480px) 440px, 700px",
-                alt: photo["alt_text"],
-                title: photo["alt_text"])
+                create_img_attrs(@album_map["folder_name"], photo))
             %>
             <div class="subtitle"><%= photo["title"] %></div>
         </div>

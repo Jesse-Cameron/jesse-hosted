@@ -4,8 +4,7 @@
             <%= link to: "/album/#{get_album_route(album_key["folder_name"])}" do %>
                 <div class="title"><h3><%= album_key["title"] %></h3></div>
                 <%= img_tag(album_key["cover_image_url"],
-                    srcset: "#{get_srcset_filename(album_key["folder_name"], album_key["cover_image"], "380w")} 380w, #{get_srcset_filename(album_key["folder_name"], album_key["cover_image"], "480w")} 480w, #{get_srcset_filename(album_key["folder_name"], album_key["cover_image"], "700w")} 700w",
-                    sizes: "(max-width: 380px) 340px, (max-width: 480px) 440px, 700px"
+                    create_img_attrs(album_key["folder_name"], album_key, "cover_image")
                 )%>
             <% end %>
             <div class="subtitle"><%= album_key["subtitle"] %></div>
