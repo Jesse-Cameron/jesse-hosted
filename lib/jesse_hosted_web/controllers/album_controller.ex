@@ -19,6 +19,8 @@ defmodule JesseHostedWeb.AlbumController do
   end
 
   defp update_fn(map, album_id) do
-    Map.update!(map, "file", &image_url("albums/#{album_id}", &1))
+    filename = Map.get(map, "file")
+    file_url = image_url("albums/#{album_id}", filename)
+    Map.put(map, "url", file_url)
   end
 end

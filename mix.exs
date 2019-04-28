@@ -4,7 +4,7 @@ defmodule JesseHosted.Mixfile do
   def project do
     [
       app: :jesse_hosted,
-      version: "1.1.7",
+      version: "1.2.0",
       elixir: "~> 1.8",
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: [:phoenix, :gettext] ++ Mix.compilers(),

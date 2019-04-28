@@ -30,22 +30,26 @@ defmodule JesseHostedWeb.AlbumControllerTest do
       "images" => [
         %{
           "alt_text" => "",
-          "file" => "https://storage.googleapis.com/jesse-hosted-images/albums/furred-friends/poohie.jpg",
+          "file" => "poohie.jpg",
+          "url" => "https://storage.googleapis.com/jesse-hosted-images/albums/furred-friends/poohie.jpg",
           "title" => "pretty paradise"
         },
         %{
           "alt_text" => "",
-          "file" => "https://storage.googleapis.com/jesse-hosted-images/albums/furred-friends/lucy.jpg",
+          "file" => "lucy.jpg",
+          "url" => "https://storage.googleapis.com/jesse-hosted-images/albums/furred-friends/lucy.jpg",
           "title" => "lovely lucy"
         },
         %{
           "alt_text" => "",
-          "file" => "https://storage.googleapis.com/jesse-hosted-images/albums/furred-friends/teddy.jpg",
+          "file" => "teddy.jpg",
+          "url" => "https://storage.googleapis.com/jesse-hosted-images/albums/furred-friends/teddy.jpg",
           "title" => "temperate teddy"
         },
         %{
           "alt_text" => "",
-          "file" => "https://storage.googleapis.com/jesse-hosted-images/albums/furred-friends/polly.jpg",
+          "file" => "polly.jpg",
+          "url" => "https://storage.googleapis.com/jesse-hosted-images/albums/furred-friends/polly.jpg",
           "title" => "pleasant polly"
         }
       ],
@@ -56,9 +60,9 @@ defmodule JesseHostedWeb.AlbumControllerTest do
     assert result_map == expected_map
   end
 
-  test "GET /album/fakeAlbum - should throw an error" do
+  test "GET /album/fakeAlbum - should throw an error", %{conn: conn} do
     assert_raise JesseHostedWeb.FileHelper.FileNotFoundError, fn ->
-      conn = get(conn, "album/fakeAlbum")
+      get(conn, "album/fakeAlbum")
     end
   end
 end

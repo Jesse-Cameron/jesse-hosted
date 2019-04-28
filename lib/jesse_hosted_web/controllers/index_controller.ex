@@ -16,7 +16,8 @@ defmodule JesseHostedWeb.IndexController do
 
   defp update_fn(map) do
     album_id = map["folder_name"]
-    map |> Map.update!("cover_image", &image_url("albums/#{album_id}", &1))
+    file_name = image_url("albums/#{album_id}", map["cover_image"])
+    Map.put(map, "cover_image_url",  file_name)
   end
 
   def about(conn, _params) do
