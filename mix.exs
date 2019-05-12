@@ -19,7 +19,7 @@ defmodule JesseHosted.Mixfile do
   def application do
     [
       mod: {JesseHosted.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :cachex]
     ]
   end
 
@@ -40,7 +40,8 @@ defmodule JesseHosted.Mixfile do
       {:jason, "~> 1.0"},
       {:gettext, "~> 0.11"},
       {:plug, "~> 1.7"},
-      {:plug_cowboy, "~> 2.0"}
+      {:plug_cowboy, "~> 2.0"},
+      {:cachex, "~> 3.1.3"}
     ]
   end
 end

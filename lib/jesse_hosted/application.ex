@@ -9,9 +9,10 @@ defmodule JesseHosted.Application do
     # Define workers and child supervisors to be supervised
     children = [
       # Start the endpoint when the application starts
-      supervisor(JesseHostedWeb.Endpoint, [])
+      supervisor(JesseHostedWeb.Endpoint, []),
       # Start your own worker by calling: JesseHosted.Worker.start_link(arg1, arg2, arg3)
       # worker(JesseHosted.Worker, [arg1, arg2, arg3]),
+      worker(Cachex, [:app_cache, []])
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
