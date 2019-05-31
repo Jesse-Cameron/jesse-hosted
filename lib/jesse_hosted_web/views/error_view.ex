@@ -18,11 +18,10 @@ defmodule JesseHostedWeb.ErrorView do
   end
 
   def get_recommended_links() do
-    read_json_to_map("site.json")["albums"] |> Enum.take_random(3) 
+    get_site_map() |> Enum.take_random(3)
   end
 
-  def get_album_route(album_name) do 
+  def get_album_route(album_name) do
     String.replace(album_name, "-", "_")
   end
-
 end

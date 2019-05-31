@@ -9,7 +9,7 @@ defmodule JesseHostedWeb.AlbumController do
   end
 
   def album(conn, %{"name" => file_name}) do
-    album_map = read_json_to_map("albums/" <> file_name <> ".json") |> to_image_map()
+    album_map = read_album_from_file(file_name) |> to_image_map()
     render(conn, "index.html", album_map: album_map)
   end
 

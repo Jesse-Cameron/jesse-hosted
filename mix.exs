@@ -4,7 +4,7 @@ defmodule JesseHosted.Mixfile do
   def project do
     [
       app: :jesse_hosted,
-      version: "1.2.0",
+      version: "1.2.1",
       elixir: "~> 1.8",
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: [:phoenix, :gettext] ++ Mix.compilers(),
@@ -19,7 +19,7 @@ defmodule JesseHosted.Mixfile do
   def application do
     [
       mod: {JesseHosted.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :cachex]
     ]
   end
 
@@ -40,7 +40,9 @@ defmodule JesseHosted.Mixfile do
       {:jason, "~> 1.0"},
       {:gettext, "~> 0.11"},
       {:plug, "~> 1.7"},
-      {:plug_cowboy, "~> 2.0"}
+      {:plug_cowboy, "~> 2.0"},
+      {:cachex, "~> 3.1.3"},
+      {:mock, "~> 0.3.0", only: :test}
     ]
   end
 end
