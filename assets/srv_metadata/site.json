@@ -1,6 +1,14 @@
 {
   "albums": [
     {
+      "title": "lion city",
+      "album_id": "947e4125-eb81-4717-9d93-6a1090895d0f",
+      "date": "2019-06-01",
+      "folder_name": "lion-city",
+      "cover_image": "1.jpg",
+      "subtitle": ""
+    },
+    {
       "title": "old arches",
       "album_id": "d0bc75f8-1d12-41e8-82dd-eea713f5677a",
       "date": "2019-03-19",

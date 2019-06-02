@@ -1,0 +1,43 @@
+{
+    "id": "947e4125-eb81-4717-9d93-6a1090895d0f",
+    "title": "the lion city",
+    "folder_name" : "lion-city",
+    "subtitle": "surprisingly, there wasn't any lions. just a lot of malls and ac units",
+    "date_uploaded": "2019-06-02T09:04:42.213Z",
+    "images": [
+    {
+        "file": "1.jpg",
+        "title": "",
+        "alt_text": ""
+    },
+    {
+        "file": "2.jpg",
+        "title": "",
+        "alt_text": ""
+    },
+    {
+        "file": "3.jpg",
+        "title": "",
+        "alt_text": ""
+    },
+    {
+        "file": "4.jpg",
+        "title": "",
+        "alt_text": ""
+    },
+    {
+        "file": "5.jpg",
+        "title": "",
+        "alt_text": ""
+    },
+    {
+        "file": "6.jpg",
+        "title": "",
+        "alt_text": ""
+    },
+    {
+        "file": "7.jpg",
+        "title": "",
+        "alt_text": ""
+    }]
+}
