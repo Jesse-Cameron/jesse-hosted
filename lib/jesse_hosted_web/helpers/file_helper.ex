@@ -14,7 +14,7 @@ defmodule JesseHostedWeb.FileHelper do
   defp read_json_file_to_map(album_name) do
     album_path = "./assets/srv_metadata/#{album_name}.json"
     case File.read(album_path) do
-      {:ok, body} -> Poison.Parser.parse!(body)
+      {:ok, body} -> Poison.Parser.parse!(body, %{})
       {:error, _response} -> raise FileNotFoundError
     end
   end
