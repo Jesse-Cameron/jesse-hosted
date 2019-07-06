@@ -1,4 +1,4 @@
-FROM bitwalker/alpine-elixir-phoenix:1.8.0 AS phx-build 
+FROM bitwalker/alpine-elixir-phoenix:latest AS phx-build 
 ARG MIX_ENV=prod
 
 ENV MIX_ENV=${MIX_ENV}
@@ -22,7 +22,7 @@ RUN cd assets && \
     rm -rf /tmp && \
     rm -rf assets/node_modules
 
-FROM bitwalker/alpine-elixir:1.8.0
+FROM bitwalker/alpine-elixir:latest
 ARG MIX_ENV=prod
 ARG PORT=80
 
@@ -30,13 +30,6 @@ ARG PORT=80
 EXPOSE ${PORT}
 ENV PORT=${PORT} MIX_ENV=${MIX_ENV}
 
-COPY --from=phx-build /opt/app/_build /opt/app/_build
-COPY --from=phx-build /opt/app/priv /opt/app/priv
-COPY --from=phx-build /opt/app/config /opt/app/config
-COPY --from=phx-build /opt/app/assets /opt/app/assets
-COPY --from=phx-build /opt/app/lib /opt/app/lib
-COPY --from=phx-build /opt/app/deps /opt/app/deps
-COPY --from=phx-build /opt/app/.mix /opt/app/.mix
-COPY --from=phx-build /opt/app/mix.* /opt/app/
+COPY --from=phx-build /opt/app /opt/app
 
 CMD ["mix", "phx.server"]
