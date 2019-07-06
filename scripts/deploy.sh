@@ -10,7 +10,7 @@ VERSION=${4}
 TAG=$(echo "${BRANCH//'/'/-}-${VERSION}")
 TAG_LATEST=$(echo "${BRANCH//'/'/-}-latest")
 
-docker-compose -f docker-compose.yml build
+docker-compose -f docker-compose.yml build --no-cache
 
 # push to gcr
 
