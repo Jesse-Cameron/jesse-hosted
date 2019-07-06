@@ -1,4 +1,4 @@
-FROM bitwalker/alpine-elixir-phoenix:latest AS phx-build 
+FROM bitwalker/alpine-elixir-phoenix:1.8.0 AS phx-build 
 ARG MIX_ENV=prod
 
 ENV MIX_ENV=${MIX_ENV}
@@ -22,7 +22,7 @@ RUN cd assets && \
     rm -rf /tmp && \
     rm -rf assets/node_modules
 
-FROM bitwalker/alpine-elixir:latest
+FROM bitwalker/alpine-elixir:1.8.0
 ARG MIX_ENV=prod
 ARG PORT=80
 
