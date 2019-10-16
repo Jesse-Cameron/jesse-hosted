@@ -1,6 +1,14 @@
 {
   "albums": [
     {
+      "title": "winter sundays",
+      "album_id": "619ab419-f1cd-4137-a9e1-b1f169c56001",
+      "date": "2019-10-16",
+      "folder_name": "winter-sundays",
+      "cover_image": "4.jpg",
+      "subtitle": ""
+    },
+    {
       "title": "lion city",
       "album_id": "947e4125-eb81-4717-9d93-6a1090895d0f",
       "date": "2019-06-01",
