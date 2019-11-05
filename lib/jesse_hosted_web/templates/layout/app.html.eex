@@ -25,6 +25,7 @@
             <div class="sidebar-btn">☰</div>
             <div class="sidebar-links">
                 <p><%= link("home", to: "/home")%></p>
+                <p><%= link("aix en carlton", to: "/album/aix_en_carlton")%></p>
                 <p><%= link("winter sundays", to: "/album/winter_sundays")%></p>
                 <p><%= link("lion city", to: "/album/lion_city")%></p>
                 <p><%= link("old arches", to: "/album/old_arches")%></p>
