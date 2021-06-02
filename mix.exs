@@ -41,7 +41,7 @@ defmodule JesseHosted.Mixfile do
       {:gettext, "~> 0.11"},
       {:plug, "~> 1.7"},
       {:plug_cowboy, "~> 2.0"},
-      {:cachex, "~> 3.2.0"},
+      {:cachex, "~> 3.4.0"},
       {:mock, "~> 0.3.0", only: :test}
     ]
   end
